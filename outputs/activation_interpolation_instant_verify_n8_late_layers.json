@@ -1,0 +1,1936 @@
+{
+  "model": "../TinyLoRA-GRPO-Coder/models/Qwen3-0.6B",
+  "dataset": "synthetic_math",
+  "n": 8,
+  "low_mode": "instant",
+  "high_mode": "verify",
+  "layers": [
+    18,
+    20,
+    23,
+    27
+  ],
+  "ts": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "summaries": [
+    {
+      "layer": 18,
+      "by_t": [
+        {
+          "t": 0.0,
+          "mean_gap": 9.889687646591483e-05,
+          "mean_continue_mass": 0.0001065851438397658,
+          "mean_final_mass": 7.688267373850977e-06
+        },
+        {
+          "t": 0.25,
+          "mean_gap": 0.0007422039220728038,
+          "mean_continue_mass": 0.0007825305183359887,
+          "mean_final_mass": 4.032659626318491e-05
+        },
+        {
+          "t": 0.5,
+          "mean_gap": 0.011427079642089666,
+          "mean_continue_mass": 0.011718778288923204,
+          "mean_final_mass": 0.0002916986468335381
+        },
+        {
+          "t": 0.75,
+          "mean_gap": 0.10049542867636774,
+          "mean_continue_mass": 0.10228361189365387,
+          "mean_final_mass": 0.0017881832172861323
+        },
+        {
+          "t": 1.0,
+          "mean_gap": 0.2184362417901866,
+          "mean_continue_mass": 0.22217880748212337,
+          "mean_final_mass": 0.003742565691936761
+        }
+      ],
+      "delta_t1_t0": 0.2183373449137207,
+      "monotonic_non_decreasing": true,
+      "monotonic_non_increasing": false
+    },
+    {
+      "layer": 20,
+      "by_t": [
+        {
+          "t": 0.0,
+          "mean_gap": 9.889687646591483e-05,
+          "mean_continue_mass": 0.0001065851438397658,
+          "mean_final_mass": 7.688267373850977e-06
+        },
+        {
+          "t": 0.25,
+          "mean_gap": 0.001689468925633264,
+          "mean_continue_mass": 0.0017488020384917036,
+          "mean_final_mass": 5.933311285843956e-05
+        },
+        {
+          "t": 0.5,
+          "mean_gap": 0.025774007674044697,
+          "mean_continue_mass": 0.026214584708213806,
+          "mean_final_mass": 0.00044057703416910954
+        },
+        {
+          "t": 0.75,
+          "mean_gap": 0.1557718247786397,
+          "mean_continue_mass": 0.15770405437797308,
+          "mean_final_mass": 0.0019322295993333682
+        },
+        {
+          "t": 1.0,
+          "mean_gap": 0.27311447574174963,
+          "mean_continue_mass": 0.27585880272090435,
+          "mean_final_mass": 0.002744326979154721
+        }
+      ],
+      "delta_t1_t0": 0.2730155788652837,
+      "monotonic_non_decreasing": true,
+      "monotonic_non_increasing": false
+    },
+    {
+      "layer": 23,
+      "by_t": [
+        {
+          "t": 0.0,
+          "mean_gap": 9.889687646591483e-05,
+          "mean_continue_mass": 0.0001065851438397658,
+          "mean_final_mass": 7.688267373850977e-06
+        },
+        {
+          "t": 0.25,
+          "mean_gap": 0.0018376271777924558,
+          "mean_continue_mass": 0.0018929431098513305,
+          "mean_final_mass": 5.531593205887475e-05
+        },
+        {
+          "t": 0.5,
+          "mean_gap": 0.023960191330843372,
+          "mean_continue_mass": 0.02432712074369192,
+          "mean_final_mass": 0.00036692941284854896
+        },
+        {
+          "t": 0.75,
+          "mean_gap": 0.13865556358359754,
+          "mean_continue_mass": 0.14026853814721107,
+          "mean_final_mass": 0.001612974563613534
+        },
+        {
+          "t": 1.0,
+          "mean_gap": 0.26846856920747086,
+          "mean_continue_mass": 0.2713443897664547,
+          "mean_final_mass": 0.0028758205589838326
+        }
+      ],
+      "delta_t1_t0": 0.26836967233100495,
+      "monotonic_non_decreasing": true,
+      "monotonic_non_increasing": false
+    },
+    {
+      "layer": 27,
+      "by_t": [
+        {
+          "t": 0.0,
+          "mean_gap": 9.393225729326105e-05,
+          "mean_continue_mass": 9.560565058563952e-05,
+          "mean_final_mass": 1.6733932923784778e-06
+        },
+        {
+          "t": 0.25,
+          "mean_gap": 0.0011186276493617697,
+          "mean_continue_mass": 0.0011258106969762594,
+          "mean_final_mass": 7.183047614489624e-06
+        },
+        {
+          "t": 0.5,
+          "mean_gap": 0.019770115134178923,
+          "mean_continue_mass": 0.01981918653473258,
+          "mean_final_mass": 4.907140055365744e-05
+        },
+        {
+          "t": 0.75,
+          "mean_gap": 0.28358050903261756,
+          "mean_continue_mass": 0.2839144039899111,
+          "mean_final_mass": 0.0003338949572935235
+        },
+        {
+          "t": 1.0,
+          "mean_gap": 0.7343372005234414,
+          "mean_continue_mass": 0.7348894476890564,
+          "mean_final_mass": 0.0005522471656149719
+        }
+      ],
+      "delta_t1_t0": 0.7342432682661482,
+      "monotonic_non_decreasing": true,
+      "monotonic_non_increasing": false
+    }
+  ],
+  "rows": [
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 8.665191944601247e-05,
+      "continue_mass": 9.532579861115664e-05,
+      "final_mass": 8.673879165144172e-06
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.0006531526814796962,
+      "continue_mass": 0.0006971328402869403,
+      "final_mass": 4.398015880724415e-05
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.010484998085303232,
+      "continue_mass": 0.01076726708561182,
+      "final_mass": 0.00028226900030858815
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.09202135726809502,
+      "continue_mass": 0.0937056839466095,
+      "final_mass": 0.0016843266785144806
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.20455200504511595,
+      "continue_mass": 0.20879502594470978,
+      "final_mass": 0.00424302089959383
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 8.665191944601247e-05,
+      "continue_mass": 9.532579861115664e-05,
+      "final_mass": 8.673879165144172e-06
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.0014790344212087803,
+      "continue_mass": 0.0015357483644038439,
+      "final_mass": 5.671394319506362e-05
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.022189602750586346,
+      "continue_mass": 0.02257009595632553,
+      "final_mass": 0.0003804932057391852
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.13927033101208508,
+      "continue_mass": 0.14108990132808685,
+      "final_mass": 0.0018195703160017729
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.2678944624494761,
+      "continue_mass": 0.2710108458995819,
+      "final_mass": 0.0031163834501057863
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 8.665191944601247e-05,
+      "continue_mass": 9.532579861115664e-05,
+      "final_mass": 8.673879165144172e-06
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.0015986970865924377,
+      "continue_mass": 0.0016515717143192887,
+      "final_mass": 5.287462772685103e-05
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.020976315543521196,
+      "continue_mass": 0.021289989352226257,
+      "final_mass": 0.0003136738087050617
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.12963103572838008,
+      "continue_mass": 0.13105720281600952,
+      "final_mass": 0.0014261670876294374
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.27367302123457193,
+      "continue_mass": 0.27649521827697754,
+      "final_mass": 0.0028221970424056053
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 7.859002369059453e-05,
+      "continue_mass": 8.033270569285378e-05,
+      "final_mass": 1.7426820022592437e-06
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.0009961575187844574,
+      "continue_mass": 0.0010038507170975208,
+      "final_mass": 7.693198313063476e-06
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.018663579921849305,
+      "continue_mass": 0.018717383965849876,
+      "final_mass": 5.3804044000571594e-05
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.2879183548211586,
+      "continue_mass": 0.28828656673431396,
+      "final_mass": 0.0003682119131553918
+    },
+    {
+      "problem_id": "train-000000",
+      "question": "If x = 2 + 25, what is x times 10?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 8.665191944601247e-05,
+      "high_gap": 0.3333832605276257,
+      "gap": 0.7602321354788728,
+      "continue_mass": 0.7607793211936951,
+      "final_mass": 0.0005471857148222625
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 7.851253076296416e-05,
+      "continue_mass": 8.306837844429538e-05,
+      "final_mass": 4.5558476813312154e-06
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.0004250758502166718,
+      "continue_mass": 0.0004498860507737845,
+      "final_mass": 2.4810200557112694e-05
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.007955726337968372,
+      "continue_mass": 0.008166448213160038,
+      "final_mass": 0.00021072187519166619
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.09467214369215071,
+      "continue_mass": 0.0962846651673317,
+      "final_mass": 0.0016125214751809835
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.23887412785552442,
+      "continue_mass": 0.2419062852859497,
+      "final_mass": 0.0030321574304252863
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 7.851253076296416e-05,
+      "continue_mass": 8.306837844429538e-05,
+      "final_mass": 4.5558476813312154e-06
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.0011225152848055586,
+      "continue_mass": 0.0011640154989436269,
+      "final_mass": 4.150021413806826e-05
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.022100868518464267,
+      "continue_mass": 0.022474385797977448,
+      "final_mass": 0.00037351727951318026
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.17184596322476864,
+      "continue_mass": 0.17367799580097198,
+      "final_mass": 0.0018320325762033463
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.3078264254145324,
+      "continue_mass": 0.309935599565506,
+      "final_mass": 0.0021091741509735584
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 7.851253076296416e-05,
+      "continue_mass": 8.306837844429538e-05,
+      "final_mass": 4.5558476813312154e-06
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.001324619326624088,
+      "continue_mass": 0.0013621739344671369,
+      "final_mass": 3.755460784304887e-05
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.020750408933963627,
+      "continue_mass": 0.021071791648864746,
+      "final_mass": 0.00032138271490111947
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.14631281979382038,
+      "continue_mass": 0.14798614382743835,
+      "final_mass": 0.0016733240336179733
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.2872293679974973,
+      "continue_mass": 0.2899063229560852,
+      "final_mass": 0.002676954958587885
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 5.8130394393174356e-05,
+      "continue_mass": 5.873060945305042e-05,
+      "final_mass": 6.002150598760636e-07
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.000880821982264024,
+      "continue_mass": 0.0008841863600537181,
+      "final_mass": 3.3643777896941174e-06
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.020018135033751605,
+      "continue_mass": 0.02005055733025074,
+      "final_mass": 3.242229649913497e-05
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.32793909771135077,
+      "continue_mass": 0.3282335698604584,
+      "final_mass": 0.0002944721491076052
+    },
+    {
+      "problem_id": "train-000001",
+      "question": "A box has 9 rows with 6 items in each row, then 5 items are removed. How many remain?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 7.851253076296416e-05,
+      "high_gap": 0.3328998952638358,
+      "gap": 0.7451098835445009,
+      "continue_mass": 0.745625913143158,
+      "final_mass": 0.0005160295986570418
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.00010599200868455227,
+      "continue_mass": 0.00011661367898341268,
+      "final_mass": 1.0621670298860408e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.0009418946028745268,
+      "continue_mass": 0.0009936826536431909,
+      "final_mass": 5.178805076866411e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.01408815136528574,
+      "continue_mass": 0.014434927143156528,
+      "final_mass": 0.00034677577787078917
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.10957675869576633,
+      "continue_mass": 0.1115037128329277,
+      "final_mass": 0.001926954137161374
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.2206498454324901,
+      "continue_mass": 0.2247658669948578,
+      "final_mass": 0.004116021562367678
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.00010599200868455227,
+      "continue_mass": 0.00011661367898341268,
+      "final_mass": 1.0621670298860408e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.0019556144543457776,
+      "continue_mass": 0.002027742564678192,
+      "final_mass": 7.212811033241451e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.027986697910819203,
+      "continue_mass": 0.028458721935749054,
+      "final_mass": 0.0004720240249298513
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.15752437454648316,
+      "continue_mass": 0.1594811975955963,
+      "final_mass": 0.0019568230491131544
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.27071438753046095,
+      "continue_mass": 0.27355921268463135,
+      "final_mass": 0.002844825154170394
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.00010599200868455227,
+      "continue_mass": 0.00011661367898341268,
+      "final_mass": 1.0621670298860408e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.0019799004367087036,
+      "continue_mass": 0.002047134330496192,
+      "final_mass": 6.723389378748834e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.02483177772955969,
+      "continue_mass": 0.025221453979611397,
+      "final_mass": 0.00038967625005170703
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.14072751498315483,
+      "continue_mass": 0.14229312539100647,
+      "final_mass": 0.0015656104078516364
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.27096323925070465,
+      "continue_mass": 0.2737008333206177,
+      "final_mass": 0.0027375940699130297
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.00011902841197297676,
+      "continue_mass": 0.00012159909965703264,
+      "final_mass": 2.5706876840558834e-06
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.0014019484142409055,
+      "continue_mass": 0.0014126780442893505,
+      "final_mass": 1.072963004844496e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.023141203542763833,
+      "continue_mass": 0.0232080165296793,
+      "final_mass": 6.681298691546544e-05
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.30243661513668485,
+      "continue_mass": 0.30282023549079895,
+      "final_mass": 0.00038362035411410034
+    },
+    {
+      "problem_id": "train-000002",
+      "question": "If x = 20 + 15, what is x times 3?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 0.00010599200868455227,
+      "high_gap": 0.3174066669307649,
+      "gap": 0.7485743665602058,
+      "continue_mass": 0.7490906715393066,
+      "final_mass": 0.0005163049791008234
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 8.946462548919953e-05,
+      "continue_mass": 9.628367115510628e-05,
+      "final_mass": 6.819045665906742e-06
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.0008439916928182356,
+      "continue_mass": 0.0008804808021523058,
+      "final_mass": 3.6489109334070235e-05
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.01408045573043637,
+      "continue_mass": 0.014357615262269974,
+      "final_mass": 0.000277159531833604
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.12940927618183196,
+      "continue_mass": 0.1313808262348175,
+      "final_mass": 0.001971550052985549
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.27616414707154036,
+      "continue_mass": 0.2808649241924286,
+      "final_mass": 0.004700777120888233
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 8.946462548919953e-05,
+      "continue_mass": 9.628367115510628e-05,
+      "final_mass": 6.819045665906742e-06
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.0018299718940397725,
+      "continue_mass": 0.0018862197175621986,
+      "final_mass": 5.624782352242619e-05
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.02883269826998003,
+      "continue_mass": 0.029274046421051025,
+      "final_mass": 0.0004413481510709971
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.18340326729230583,
+      "continue_mass": 0.18562673032283783,
+      "final_mass": 0.0022234630305320024
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.32857857272028923,
+      "continue_mass": 0.33215880393981934,
+      "final_mass": 0.0035802312195301056
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 8.946462548919953e-05,
+      "continue_mass": 9.628367115510628e-05,
+      "final_mass": 6.819045665906742e-06
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.0019584783840400632,
+      "continue_mass": 0.0020131103228777647,
+      "final_mass": 5.4631938837701455e-05
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.02783080897643231,
+      "continue_mass": 0.028226520866155624,
+      "final_mass": 0.00039571188972331583
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.1705319790635258,
+      "continue_mass": 0.17241375148296356,
+      "final_mass": 0.001881772419437766
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.3245085538364947,
+      "continue_mass": 0.3280671536922455,
+      "final_mass": 0.003558599855750799
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.00011641605192380666,
+      "continue_mass": 0.00011825772526208311,
+      "final_mass": 1.8416733382764505e-06
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.0015321547371058841,
+      "continue_mass": 0.001541134319268167,
+      "final_mass": 8.979582162282895e-06
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.028242225918802433,
+      "continue_mass": 0.028308283537626266,
+      "final_mass": 6.605761882383376e-05
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.3700536462420132,
+      "continue_mass": 0.3704591393470764,
+      "final_mass": 0.0004054931050632149
+    },
+    {
+      "problem_id": "train-000003",
+      "question": "If x = 4 + 8, what is x times 9?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 8.946462548919953e-05,
+      "high_gap": 0.3550370038719848,
+      "gap": 0.8005421111010946,
+      "continue_mass": 0.8010513782501221,
+      "final_mass": 0.000509267149027437
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.00010946885322482558,
+      "continue_mass": 0.0001195921067846939,
+      "final_mass": 1.0123253559868317e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.0007636819937033579,
+      "continue_mass": 0.0008095072698779404,
+      "final_mass": 4.582527617458254e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.01079270223272033,
+      "continue_mass": 0.011088239960372448,
+      "final_mass": 0.0002955377276521176
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.09475479635875672,
+      "continue_mass": 0.09633734822273254,
+      "final_mass": 0.001582551863975823
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.20824721362441778,
+      "continue_mass": 0.2116222083568573,
+      "final_mass": 0.003374994732439518
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.00010946885322482558,
+      "continue_mass": 0.0001195921067846939,
+      "final_mass": 1.0123253559868317e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.0017103057980421,
+      "continue_mass": 0.0017716304864734411,
+      "final_mass": 6.13246884313412e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.02371799762477167,
+      "continue_mass": 0.024114159867167473,
+      "final_mass": 0.00039616224239580333
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.14455125737003982,
+      "continue_mass": 0.1462337076663971,
+      "final_mass": 0.001682450296357274
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.25321578863076866,
+      "continue_mass": 0.2555616796016693,
+      "final_mass": 0.002345890970900655
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.00010946885322482558,
+      "continue_mass": 0.0001195921067846939,
+      "final_mass": 1.0123253559868317e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.0017858450373751111,
+      "continue_mass": 0.0018406636081635952,
+      "final_mass": 5.481857078848407e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.022303008678136393,
+      "continue_mass": 0.022621894255280495,
+      "final_mass": 0.00031888557714410126
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.1343488934217021,
+      "continue_mass": 0.1357189565896988,
+      "final_mass": 0.0013700631679967046
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.26047332072630525,
+      "continue_mass": 0.2628175914287567,
+      "final_mass": 0.0023442707024514675
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.00010594968262012117,
+      "continue_mass": 0.00010841699986485764,
+      "final_mass": 2.4673172447364777e-06
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.0012797891013178742,
+      "continue_mass": 0.0012900934088975191,
+      "final_mass": 1.0304307579644956e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.022218313941266388,
+      "continue_mass": 0.02228378690779209,
+      "final_mass": 6.547296652570367e-05
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.3058581774821505,
+      "continue_mass": 0.3062439262866974,
+      "final_mass": 0.00038574880454689264
+    },
+    {
+      "problem_id": "train-000004",
+      "question": "If x = 19 + 8, what is x times 19?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 0.00010946885322482558,
+      "high_gap": 0.30548718047793955,
+      "gap": 0.7432847694144584,
+      "continue_mass": 0.7437880635261536,
+      "final_mass": 0.0005032941116951406
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.0001262682644664892,
+      "continue_mass": 0.000135640031658113,
+      "final_mass": 9.371767191623803e-06
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.000956097268499434,
+      "continue_mass": 0.00100525317247957,
+      "final_mass": 4.915590398013592e-05
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.013268686161609367,
+      "continue_mass": 0.013607018627226353,
+      "final_mass": 0.00033833246561698616
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.11500161502044648,
+      "continue_mass": 0.11692283302545547,
+      "final_mass": 0.0019212180050089955
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.250187304103747,
+      "continue_mass": 0.2540571391582489,
+      "final_mass": 0.003869835054501891
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.0001262682644664892,
+      "continue_mass": 0.000135640031658113,
+      "final_mass": 9.371767191623803e-06
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.0023007627023616806,
+      "continue_mass": 0.002370771486312151,
+      "final_mass": 7.000878395047039e-05
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.03225218169973232,
+      "continue_mass": 0.032729778438806534,
+      "final_mass": 0.0004775967390742153
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.18597955838777125,
+      "continue_mass": 0.18799905478954315,
+      "final_mass": 0.002019496401771903
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.32247725734487176,
+      "continue_mass": 0.3254815936088562,
+      "final_mass": 0.0030043362639844418
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.0001262682644664892,
+      "continue_mass": 0.000135640031658113,
+      "final_mass": 9.371767191623803e-06
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.0024185588845284656,
+      "continue_mass": 0.0024815925862640142,
+      "final_mass": 6.303370173554868e-05
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.028244691871805117,
+      "continue_mass": 0.02862086519598961,
+      "final_mass": 0.00037617332418449223
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.1511277260724455,
+      "continue_mass": 0.15276387333869934,
+      "final_mass": 0.001636147266253829
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.2964941053651273,
+      "continue_mass": 0.29963618516921997,
+      "final_mass": 0.0031420798040926456
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 9.594715197636106e-05,
+      "continue_mass": 9.801302803680301e-05,
+      "final_mass": 2.0658760604419513e-06
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.0009547996232868172,
+      "continue_mass": 0.0009620139608159661,
+      "final_mass": 7.2143375291489065e-06
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.014710239294799976,
+      "continue_mass": 0.014749882742762566,
+      "final_mass": 3.964344796258956e-05
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.22623218581429683,
+      "continue_mass": 0.22647981345653534,
+      "final_mass": 0.00024762764223851264
+    },
+    {
+      "problem_id": "train-000005",
+      "question": "What is the positive difference between 9 times 20 and 16 times 20?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 0.0001262682644664892,
+      "high_gap": 0.3124035552609712,
+      "gap": 0.7589501611946616,
+      "continue_mass": 0.7593730092048645,
+      "final_mass": 0.0004228480102028698
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 7.182027593444218e-05,
+      "continue_mass": 7.77221066528e-05,
+      "final_mass": 5.9018307183578145e-06
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.0005418097825895529,
+      "continue_mass": 0.0005824182881042361,
+      "final_mass": 4.06085055146832e-05
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.008259426889708266,
+      "continue_mass": 0.00859478022903204,
+      "final_mass": 0.000335353339323774
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.07145847333595157,
+      "continue_mass": 0.07352427393198013,
+      "final_mass": 0.0020658005960285664
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.15257032262161374,
+      "continue_mass": 0.15668073296546936,
+      "final_mass": 0.004110410343855619
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 7.182027593444218e-05,
+      "continue_mass": 7.77221066528e-05,
+      "final_mass": 5.9018307183578145e-06
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.00135058809973998,
+      "continue_mass": 0.0014171249931678176,
+      "final_mass": 6.653689342783764e-05
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.021602935914415866,
+      "continue_mass": 0.02217925526201725,
+      "final_mass": 0.0005763193476013839
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.1149699583183974,
+      "continue_mass": 0.11733310669660568,
+      "final_mass": 0.0023631483782082796
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.18508367473259568,
+      "continue_mass": 0.1882646530866623,
+      "final_mass": 0.0031809783540666103
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 7.182027593444218e-05,
+      "continue_mass": 7.77221066528e-05,
+      "final_mass": 5.9018307183578145e-06
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.0015669631393393502,
+      "continue_mass": 0.0016332792583853006,
+      "final_mass": 6.631611904595047e-05
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.020485456916503608,
+      "continue_mass": 0.02095099911093712,
+      "final_mass": 0.0004655421944335103
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.10391395399346948,
+      "continue_mass": 0.10572819411754608,
+      "final_mass": 0.0018142401240766048
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.19803947838954628,
+      "continue_mass": 0.2012408971786499,
+      "final_mass": 0.003201418789103627
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 7.351214492246072e-05,
+      "continue_mass": 7.473448931705207e-05,
+      "final_mass": 1.222344394591346e-06
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.0007148299705477257,
+      "continue_mass": 0.000719995703548193,
+      "final_mass": 5.1657330004672986e-06
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.01055858654945041,
+      "continue_mass": 0.0105946846306324,
+      "final_mass": 3.609808118198998e-05
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.16158378403633833,
+      "continue_mass": 0.1618926227092743,
+      "final_mass": 0.0003088386729359627
+    },
+    {
+      "problem_id": "train-000006",
+      "question": "Mia has 27 tokens and gets 29 more tokens for each of 2 rounds. How many tokens does she have?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 7.182027593444218e-05,
+      "high_gap": 0.22162321966607124,
+      "gap": 0.6217175479396246,
+      "continue_mass": 0.6225350499153137,
+      "final_mass": 0.0008175019756890833
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.00012299653371883323,
+      "continue_mass": 0.00012843537842854857,
+      "final_mass": 5.43884470971534e-06
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.25,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.0008119275044009555,
+      "continue_mass": 0.000841883069369942,
+      "final_mass": 2.9955564968986437e-05
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.5,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.012486490333685651,
+      "continue_mass": 0.01273392979055643,
+      "final_mass": 0.0002474394568707794
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 18,
+      "t": 0.75,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.09706900885794312,
+      "continue_mass": 0.0986095517873764,
+      "final_mass": 0.0015405429294332862
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 18,
+      "t": 1.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.19624496856704354,
+      "continue_mass": 0.19873827695846558,
+      "final_mass": 0.0024933083914220333
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.00012299653371883323,
+      "continue_mass": 0.00012843537842854857,
+      "final_mass": 5.43884470971534e-06
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.25,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.0017669587505224627,
+      "continue_mass": 0.0018171631963923573,
+      "final_mass": 5.02044458698947e-05
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.5,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.027509078703587875,
+      "continue_mass": 0.027916233986616135,
+      "final_mass": 0.0004071552830282599
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 20,
+      "t": 0.75,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.14862988807726651,
+      "continue_mass": 0.15019074082374573,
+      "final_mass": 0.0015608527464792132
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 20,
+      "t": 1.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.2491252371110022,
+      "continue_mass": 0.2508980333805084,
+      "final_mass": 0.001772796269506216
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.00012299653371883323,
+      "continue_mass": 0.00012843537842854857,
+      "final_mass": 5.43884470971534e-06
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.25,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.0020679551271314267,
+      "continue_mass": 0.002114019123837352,
+      "final_mass": 4.606399670592509e-05
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.5,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.02625906199682504,
+      "continue_mass": 0.026613451540470123,
+      "final_mass": 0.0003543895436450839
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 23,
+      "t": 0.75,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.13265058561228216,
+      "continue_mass": 0.13418705761432648,
+      "final_mass": 0.00153647200204432
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 23,
+      "t": 1.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.23636746685951948,
+      "continue_mass": 0.23889091610908508,
+      "final_mass": 0.0025234492495656013
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.00010388419684659311,
+      "continue_mass": 0.00010476054740138352,
+      "final_mass": 8.76350554790406e-07
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.25,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.0011885198473464698,
+      "continue_mass": 0.0011925330618396401,
+      "final_mass": 4.013214493170381e-06
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.5,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.020608636870747432,
+      "continue_mass": 0.020640896633267403,
+      "final_mass": 3.2259762519970536e-05
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 27,
+      "t": 0.75,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.2866222110169474,
+      "continue_mass": 0.2868993580341339,
+      "final_mass": 0.0002771470171865076
+    },
+    {
+      "problem_id": "train-000007",
+      "question": "A box has 24 rows with 15 items in each row, then 12 items are removed. How many remain?",
+      "layer": 27,
+      "t": 1.0,
+      "low_gap": 0.00012299653371883323,
+      "high_gap": 0.27914579026401043,
+      "gap": 0.6962866289541125,
+      "continue_mass": 0.6968721747398376,
+      "final_mass": 0.0005855457857251167
+    }
+  ]
+}

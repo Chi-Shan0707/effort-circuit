@@ -1,0 +1,28 @@
+model: ../TinyLoRA-GRPO-Coder/models/Qwen3-0.6B
+seed: 42
+temperature: 0.0
+max_new_tokens: 256
+device: auto
+dtype: auto
+cpu:
+  # Measured best setting under current cgroup quota (`cpu.max = 400000 100000`).
+  # Host exposes 240 logical CPUs, but this container is effectively limited to 4 cores.
+  num_threads: 4
+  env_threads: 4
+dataset:
+  default_n: 2000
+  heldout_n: 400
+activations:
+  batch_size: 1
+  shard_size: 128
+sweeps:
+  alphas: [-3, -2, -1, -0.5, 0, 0.5, 1, 2, 3]
+  max_examples: null
+loop_engineering:
+  command:
+    - python
+    - -m
+    - pytest
+    - -q
+  interval_seconds: 30
+  iterations: 0

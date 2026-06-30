@@ -1,0 +1,77 @@
+{
+  "model_load_seconds": 9.349207639694214,
+  "results": [
+    {
+      "threads": 1,
+      "tokens": 9,
+      "seconds": 0.9230916500091553,
+      "tokens_per_second_prefill": 9.749844449259982
+    },
+    {
+      "threads": 1,
+      "tokens": 25,
+      "seconds": 1.0308194160461426,
+      "tokens_per_second_prefill": 24.252550554287314
+    },
+    {
+      "threads": 1,
+      "tokens": 43,
+      "seconds": 1.358349084854126,
+      "tokens_per_second_prefill": 31.65607462725077
+    },
+    {
+      "threads": 2,
+      "tokens": 9,
+      "seconds": 0.2336108684539795,
+      "tokens_per_second_prefill": 38.5256048212199
+    },
+    {
+      "threads": 2,
+      "tokens": 25,
+      "seconds": 0.29915475845336914,
+      "tokens_per_second_prefill": 83.56878603318918
+    },
+    {
+      "threads": 2,
+      "tokens": 43,
+      "seconds": 0.3821225166320801,
+      "tokens_per_second_prefill": 112.52935414272326
+    },
+    {
+      "threads": 4,
+      "tokens": 9,
+      "seconds": 0.15025949478149414,
+      "tokens_per_second_prefill": 59.8963813440722
+    },
+    {
+      "threads": 4,
+      "tokens": 25,
+      "seconds": 0.25125789642333984,
+      "tokens_per_second_prefill": 99.49936044150412
+    },
+    {
+      "threads": 4,
+      "tokens": 43,
+      "seconds": 0.33002352714538574,
+      "tokens_per_second_prefill": 130.29374109154693
+    },
+    {
+      "threads": 8,
+      "tokens": 9,
+      "seconds": 0.20094943046569824,
+      "tokens_per_second_prefill": 44.78738744938263
+    },
+    {
+      "threads": 8,
+      "tokens": 25,
+      "seconds": 0.5037298202514648,
+      "tokens_per_second_prefill": 49.629779685308
+    },
+    {
+      "threads": 8,
+      "tokens": 43,
+      "seconds": 0.4723641872406006,
+      "tokens_per_second_prefill": 91.031456578434
+    }
+  ]
+}
