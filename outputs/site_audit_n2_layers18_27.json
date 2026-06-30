@@ -1,0 +1,105 @@
+{
+  "model": "../TinyLoRA-GRPO-Coder/models/Qwen3-0.6B",
+  "dataset": "synthetic_math",
+  "n": 2,
+  "layers": [
+    18,
+    27
+  ],
+  "low_mode": "instant",
+  "high_mode": "verify",
+  "summaries": [
+    {
+      "layer": 18,
+      "mean_self_hook_patch_logit_delta": 0.0,
+      "max_self_hook_patch_logit_delta": 0.0,
+      "mean_hidden_state_patch_logit_delta": 0.0,
+      "max_hidden_state_patch_logit_delta": 0.0,
+      "mean_hidden_state_vs_hook_state_delta": 0.0,
+      "max_hidden_state_vs_hook_state_delta": 0.0
+    },
+    {
+      "layer": 27,
+      "mean_self_hook_patch_logit_delta": 0.0,
+      "max_self_hook_patch_logit_delta": 0.0,
+      "mean_hidden_state_patch_logit_delta": 14.900325059890747,
+      "max_hidden_state_patch_logit_delta": 16.800487518310547,
+      "mean_hidden_state_vs_hook_state_delta": 215.99106979370117,
+      "max_hidden_state_vs_hook_state_delta": 256.94140625
+    }
+  ],
+  "rows": [
+    {
+      "problem_id": "train-000000",
+      "mode": "instant",
+      "layer": 18,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_vs_hook_state_max_abs_delta": 0.0
+    },
+    {
+      "problem_id": "train-000000",
+      "mode": "instant",
+      "layer": 27,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 13.739158630371094,
+      "hidden_state_vs_hook_state_max_abs_delta": 167.1874237060547
+    },
+    {
+      "problem_id": "train-000000",
+      "mode": "verify",
+      "layer": 18,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_vs_hook_state_max_abs_delta": 0.0
+    },
+    {
+      "problem_id": "train-000000",
+      "mode": "verify",
+      "layer": 27,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 16.800487518310547,
+      "hidden_state_vs_hook_state_max_abs_delta": 253.92433166503906
+    },
+    {
+      "problem_id": "train-000001",
+      "mode": "instant",
+      "layer": 18,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_vs_hook_state_max_abs_delta": 0.0
+    },
+    {
+      "problem_id": "train-000001",
+      "mode": "instant",
+      "layer": 27,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 12.638583183288574,
+      "hidden_state_vs_hook_state_max_abs_delta": 185.91111755371094
+    },
+    {
+      "problem_id": "train-000001",
+      "mode": "verify",
+      "layer": 18,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_vs_hook_state_max_abs_delta": 0.0
+    },
+    {
+      "problem_id": "train-000001",
+      "mode": "verify",
+      "layer": 27,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 16.423070907592773,
+      "hidden_state_vs_hook_state_max_abs_delta": 256.94140625
+    }
+  ]
+}
