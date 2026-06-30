@@ -1,14 +1,24 @@
 # effort-circuit
 
-Research scaffold for identifying and causally intervening on internal activations that increase useful reasoning effort in a local HuggingFace causal LM. The default configuration points at the local Qwen3-0.6B model:
+Current authoritative conclusion: see `docs/current_analysis_report.md`.
+
+This repository provides early mechanistic evidence that Qwen3-0.6B contains causally controllable late-layer generation-posture states. Activation patching and interpolation alter continuation/finalization behavior. However, a site audit shows that prior layer 27 hidden-state patching mixed non-equivalent activation sites, and stop-after-first-final evaluation shows no reliable first-committed answer correctness improvement in the current heldout runs. The current result is therefore a strong process-posture control lead, not a demonstrated reasoning-accuracy intervention.
+
+Historical synthesis: `docs/final_analysis_report.md` is retained for provenance only and contains older claims that are superseded by `docs/current_analysis_report.md`.
+
+## Current Status
+
+- **Supported**: Late decoder-block hook states causally affect continuation/finalization posture.
+- **Not supported**: Reliable first-final answer correctness improvement.
+- **Risk resolved**: Old layer 27 hidden-state patching had site mismatch and must be treated as site-mismatch/off-manifold/readout-boundary intervention unless rerun with hook-captured states.
+
+Research scaffold for identifying and causally intervening on internal activations that affect generation posture in a local HuggingFace causal LM. The default configuration points at the local Qwen3-0.6B model:
 
 ```bash
 TinyLoRA-GRPO-Coder/models/Qwen3-0.6B
 ```
 
 Core charter: 一切从第一性原理出发。See `FIRST_PRINCIPLES.md`.
-
-Comprehensive findings: see `docs/current_analysis_report.md`. Earlier historical synthesis remains in `docs/final_analysis_report.md`.
 
 ## Setup
 

@@ -1,4 +1,8 @@
-# Effort-Circuit 综合分析报告
+# Effort-Circuit 综合分析报告（Historical）
+
+> Historical note: this report is retained for provenance only. It predates the site-audit, stop-after-first-final, n=50 heldout, and controller hardening results. Do not use it as the authoritative current conclusion. Use `docs/current_analysis_report.md`, `docs/closure_report.md`, and `docs/claim_guardrails.md` instead.
+
+> Superseded claims: statements in this file suggesting stable accuracy improvement, reliable task-level utility, or clean layer 27 mechanism should be treated as historical hypotheses. Current evidence supports a causally controllable late-layer generation-posture signal, not a demonstrated reasoning-accuracy intervention.
 
 日期：2026-06-30 UTC  
 仓库：`effort-circuit`  
@@ -506,4 +510,3 @@ python -m src.strict_generation_patch_experiment \
 最值得保留的结论是：
 
 > Layer 27 residual state patch/interpolation 是当前最强的 causal intervention candidate。它在局部 logits、单调插值、严格生成和 heldout-small 复现中均表现为有用信号。下一阶段应围绕 layer 27 做 stop-after-final、扩大 heldout、加入 task-out controls 和 CET controller。
-

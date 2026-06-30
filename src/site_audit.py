@@ -77,7 +77,6 @@ def run(args: argparse.Namespace) -> dict:
         for mode in [args.low_mode, args.high_mode]:
             prompt = build_prompt(problem["question"], mode)
             base_logits, hidden_states = logits_and_hidden_states(bundle, prompt)
-            hook_logits, _ = capture_hook_output(bundle, prompt, layers[0])
             for layer in layers:
                 hook_base_logits, hook_state = capture_hook_output(bundle, prompt, layer)
                 self_patch_logits = patched_logits(bundle, prompt, layer, hook_state)
@@ -99,6 +98,8 @@ def run(args: argparse.Namespace) -> dict:
         summaries.append(
             {
                 "layer": layer,
+                "mean_passive_hook_logit_delta": sum(row["base_vs_hook_run_logit_max_abs_delta"] for row in subset) / len(subset),
+                "max_passive_hook_logit_delta": max(row["base_vs_hook_run_logit_max_abs_delta"] for row in subset),
                 "mean_self_hook_patch_logit_delta": sum(row["self_hook_patch_logit_max_abs_delta"] for row in subset) / len(subset),
                 "max_self_hook_patch_logit_delta": max(row["self_hook_patch_logit_max_abs_delta"] for row in subset),
                 "mean_hidden_state_patch_logit_delta": sum(row["hidden_state_patch_logit_max_abs_delta"] for row in subset) / len(subset),
@@ -132,19 +133,31 @@ def write_report(result: dict, out: str) -> None:
         "",
         "## Summary",
         "",
-        "| layer | self hook patch logit Δ max | hidden-state patch logit Δ max | hidden-state vs hook-state Δ max |",
-        "| ---: | ---: | ---: | ---: |",
+        "| layer | passive hook logit Δ max | self-hook patch logit Δ max | hidden-states→hook logit Δ max | hidden-states vs hook-state Δ max |",
+        "| ---: | ---: | ---: | ---: | ---: |",
     ]
     for row in result["summaries"]:
         lines.append(
-            f"| {row['layer']} | {row['max_self_hook_patch_logit_delta']:.6g} | "
+            f"| {row['layer']} | {row['max_passive_hook_logit_delta']:.6g} | {row['max_self_hook_patch_logit_delta']:.6g} | "
             f"{row['max_hidden_state_patch_logit_delta']:.6g} | {row['max_hidden_state_vs_hook_state_delta']:.6g} |"
         )
     lines.extend(
         [
             "",
+            "## Checks Reported",
+            "",
+            "- Passive hook identity check: `base_vs_hook_run_logit_max_abs_delta`.",
+            "- Self-hook patch identity check: `self_hook_patch_logit_max_abs_delta`.",
+            "- Hidden-states-to-hook equivalence check: `hidden_state_patch_logit_max_abs_delta` and `hidden_state_vs_hook_state_max_abs_delta`.",
+            "- Per-layer max logit deltas and max state deltas are summarized above and retained per row in JSON.",
+            "",
+            "## Current Run Note",
+            "",
+            "In the current archived audit (`outputs/site_audit_n2_layers18_27.*`), layer 18 passed site-equivalence while layer 27 failed site-equivalence. Therefore old layer27 hidden-state patch conclusions are downgraded to site-mismatch/off-manifold/readout-boundary interventions unless rerun with hook-captured decoder block states.",
+            "",
             "## Interpretation Guide",
             "",
+            "- Passive hook logit delta should be near zero; otherwise merely observing the hook changes the run.",
             "- Self hook patch logit delta should be near zero; otherwise the hook/patch machinery is not identity-preserving.",
             "- Hidden-state patch delta near zero means HuggingFace hidden state and hook output are equivalent for that layer/site.",
             "- Large hidden-state-vs-hook delta means prior patching mixed incompatible activation sites and must be interpreted as a site-mismatch intervention.",

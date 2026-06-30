@@ -37,3 +37,11 @@ If self-hook patch deltas are near zero but hidden-state patch deltas are large,
 ## Follow-up
 
 Step 2 should implement stop-after-first-final generation. A later step should rerun strict generation using hook-captured source states rather than `outputs.hidden_states` if this audit shows mismatch.
+
+## Closure Note
+
+The closure smoke audit confirms the key site result:
+
+- Layer 18: passive hook and self-hook patch are identity-preserving, and `outputs.hidden_states[layer+1]` is equivalent to the decoder-block hook output in the current run.
+- Layer 27: passive hook and self-hook patch are identity-preserving, but `outputs.hidden_states[layer+1]` is not equivalent to the decoder-block hook output; the closure smoke run observed a hidden-states-to-hook logit max delta of about `16.8005` and state max delta of about `253.924`.
+- Therefore old layer27 hidden-state patch conclusions are downgraded to site-mismatch/off-manifold/readout-boundary interventions unless rerun with hook-captured decoder block states.

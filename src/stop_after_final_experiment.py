@@ -16,8 +16,12 @@ from .metrics import repetition_rate
 from .prompts import build_prompt
 
 
-FINAL_LINE_RE = re.compile(
+STRICT_FINAL_LINE_RE = re.compile(
     r"(?:^|\n)\s*(?:Final answer|Final)\s*(?::|is|=)\s*(?P<answer>-?\d+(?:\.\d+)?)",
+    re.I,
+)
+RELAXED_FINAL_LINE_RE = re.compile(
+    r"(?:^|\n)\s*(?:Final answer|Final|Answer)\s*(?::|is|=)\s*(?P<answer>-?\d+(?:\.\d+)?)",
     re.I,
 )
 
@@ -33,15 +37,16 @@ def strict_prompt(question: str) -> str:
 
 
 class StopAfterFinalAnswer(StoppingCriteria):
-    def __init__(self, tokenizer, prompt_len: int):
+    def __init__(self, tokenizer, prompt_len: int, final_line_re: re.Pattern[str]):
         self.tokenizer = tokenizer
         self.prompt_len = prompt_len
+        self.final_line_re = final_line_re
         self.matched_text: str | None = None
 
     def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor, **kwargs) -> bool:
         generated = input_ids[0, self.prompt_len :]
         text = self.tokenizer.decode(generated, skip_special_tokens=True)
-        match = FINAL_LINE_RE.search(text)
+        match = self.final_line_re.search(text)
         if match:
             self.matched_text = text[: match.end()]
             return True
@@ -65,12 +70,24 @@ def capture_hook_state(bundle, prompt: str, layer: int) -> torch.Tensor:
     return captured["state"]
 
 
+def final_line_regex(relaxed: bool) -> re.Pattern[str]:
+    return RELAXED_FINAL_LINE_RE if relaxed else STRICT_FINAL_LINE_RE
+
+
 @torch.inference_mode()
-def generate_stop_after_final(bundle, prompt: str, max_new_tokens: int, temperature: float, layer: int | None = None, replacement: torch.Tensor | None = None):
+def generate_stop_after_final(
+    bundle,
+    prompt: str,
+    max_new_tokens: int,
+    temperature: float,
+    layer: int | None = None,
+    replacement: torch.Tensor | None = None,
+    relaxed_final_markers: bool = False,
+):
     tokenizer = bundle.tokenizer
     inputs = tokenizer(prompt, return_tensors="pt").to(bundle.device)
     prompt_len = inputs["input_ids"].shape[1]
-    stopper = StopAfterFinalAnswer(tokenizer, prompt_len)
+    stopper = StopAfterFinalAnswer(tokenizer, prompt_len, final_line_regex(relaxed_final_markers))
     handles = []
     used = {"done": False}
     if layer is not None and replacement is not None:
@@ -128,11 +145,15 @@ def answer_changes(text: str) -> int:
     return max(0, len(set(answers)) - 1)
 
 
-def extract_first_strict_final(text: str) -> str | None:
-    match = FINAL_LINE_RE.search(text)
+def extract_first_final(text: str, relaxed: bool = False) -> str | None:
+    match = final_line_regex(relaxed).search(text)
     if not match:
         return None
     return match.group("answer")
+
+
+def extract_first_strict_final(text: str) -> str | None:
+    return extract_first_final(text, relaxed=False)
 
 
 def run(args: argparse.Namespace) -> dict:
@@ -157,9 +178,15 @@ def run(args: argparse.Namespace) -> dict:
                 low_state, high_state = hook_states[layer]
                 replacement = (1.0 - t) * low_state + t * high_state
             stopped_completion, full_completion, stopped = generate_stop_after_final(
-                bundle, prompt, args.max_new_tokens, args.temperature, layer, replacement
+                bundle,
+                prompt,
+                args.max_new_tokens,
+                args.temperature,
+                layer,
+                replacement,
+                relaxed_final_markers=args.relaxed_final_markers,
             )
-            first_answer = extract_first_strict_final(stopped_completion)
+            first_answer = extract_first_final(stopped_completion, relaxed=args.relaxed_final_markers)
             last_answer = extract_answer(full_completion).text
             rows.append(
                 {
@@ -192,6 +219,7 @@ def run(args: argparse.Namespace) -> dict:
                 "first_final_accuracy": sum(row["first_final_correct"] for row in subset) / len(subset),
                 "last_final_accuracy": sum(row["last_final_correct"] for row in subset) / len(subset),
                 "stop_rate": sum(row["stopped"] for row in subset) / len(subset),
+                "malformed_rate": sum(row["first_final_answer"] in (None, "") for row in subset) / len(subset),
                 "mean_generated_tokens": sum(row["generated_tokens"] for row in subset) / len(subset),
                 "mean_answer_changes": sum(row["answer_changes"] for row in subset) / len(subset),
                 "mean_repetition_rate": sum(row["repetition_rate"] for row in subset) / len(subset),
@@ -204,6 +232,7 @@ def run(args: argparse.Namespace) -> dict:
         "low_mode": args.low_mode,
         "high_mode": args.high_mode,
         "conditions": [condition for condition, _, _ in conditions],
+        "final_marker_protocol": "relaxed" if args.relaxed_final_markers else "strict",
         "summaries": summaries,
         "rows": rows,
     }
@@ -216,15 +245,17 @@ def write_report(result: dict, out: str) -> None:
     lines = [
         "# Stop-After-First-Final Experiment",
         "",
+        f"Final marker protocol: `{result.get('final_marker_protocol', 'strict')}`",
+        "",
         "## Summary",
         "",
-        "| condition | first-final acc | last-final acc | stop rate | mean tokens | answer changes | repetition |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| condition | first-final acc | last-detectable acc | strict/relaxed stop rate | malformed rate | mean tokens | answer changes | repetition |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for row in result["summaries"]:
         lines.append(
             f"| {row['condition']} | {row['first_final_accuracy']:.3f} | {row['last_final_accuracy']:.3f} | "
-            f"{row['stop_rate']:.3f} | {row['mean_generated_tokens']:.2f} | {row['mean_answer_changes']:.2f} | "
+            f"{row['stop_rate']:.3f} | {row['malformed_rate']:.3f} | {row['mean_generated_tokens']:.2f} | {row['mean_answer_changes']:.2f} | "
             f"{row['mean_repetition_rate']:.4f} |"
         )
     lines.extend(["", "## Examples"])
@@ -255,6 +286,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--device", default="auto")
     parser.add_argument("--dtype", default="auto")
     parser.add_argument("--num-threads", type=int, default=4)
+    parser.add_argument(
+        "--relaxed-final-markers",
+        action="store_true",
+        help="Treat generic 'Answer:' as a final marker. Default is strict: only 'Final answer:' or 'Final:' count.",
+    )
     return parser
 
 

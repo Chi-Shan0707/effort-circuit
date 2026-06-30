@@ -4,7 +4,7 @@
 仓库：`effort-circuit`  
 模型：`../TinyLoRA-GRPO-Coder/models/Qwen3-0.6B`  
 核心宗旨：一切从第一性原理出发。  
-当前 HEAD 覆盖至：Step 3 expanded heldout statistics。
+当前 HEAD 覆盖至：closure audit after third-stage n=50 heldout and neuron/SAE smoke gate。
 
 ## 0. 最终结论先行
 

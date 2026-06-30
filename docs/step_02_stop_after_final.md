@@ -104,3 +104,7 @@ Result: `12 passed`.
 Step 2 is valuable because it prevents a false positive. The clean conclusion is no longer "layer 27 improves heldout accuracy". The clean conclusion is:
 
 > Hook-captured late-layer interventions still affect generation dynamics, but under first-commit evaluation they do not yet produce reliable correct final answers. The project should now pivot from celebrating accuracy gains to isolating why process-posture control fails to become correct answer commitment.
+
+## Closure Note
+
+The implementation now reports first strict final answer, last detectable answer as an auxiliary weak metric, strict stop rate, malformed rate, generated tokens, repetition, and answer changes. The default protocol remains strict: only `Final answer:` or `Final:` count as first-final markers. Generic `Answer:` is ignored by default and is accepted only when the optional `--relaxed-final-markers` flag is passed.

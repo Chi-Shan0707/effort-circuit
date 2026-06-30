@@ -1,0 +1,73 @@
+{
+  "model": "../TinyLoRA-GRPO-Coder/models/Qwen3-0.6B",
+  "dataset": "synthetic_math",
+  "n": 1,
+  "layers": [
+    18,
+    27
+  ],
+  "low_mode": "instant",
+  "high_mode": "verify",
+  "summaries": [
+    {
+      "layer": 18,
+      "mean_passive_hook_logit_delta": 0.0,
+      "max_passive_hook_logit_delta": 0.0,
+      "mean_self_hook_patch_logit_delta": 0.0,
+      "max_self_hook_patch_logit_delta": 0.0,
+      "mean_hidden_state_patch_logit_delta": 0.0,
+      "max_hidden_state_patch_logit_delta": 0.0,
+      "mean_hidden_state_vs_hook_state_delta": 0.0,
+      "max_hidden_state_vs_hook_state_delta": 0.0
+    },
+    {
+      "layer": 27,
+      "mean_passive_hook_logit_delta": 0.0,
+      "max_passive_hook_logit_delta": 0.0,
+      "mean_self_hook_patch_logit_delta": 0.0,
+      "max_self_hook_patch_logit_delta": 0.0,
+      "mean_hidden_state_patch_logit_delta": 15.26982307434082,
+      "max_hidden_state_patch_logit_delta": 16.800487518310547,
+      "mean_hidden_state_vs_hook_state_delta": 210.55587768554688,
+      "max_hidden_state_vs_hook_state_delta": 253.92433166503906
+    }
+  ],
+  "rows": [
+    {
+      "problem_id": "train-000000",
+      "mode": "instant",
+      "layer": 18,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_vs_hook_state_max_abs_delta": 0.0
+    },
+    {
+      "problem_id": "train-000000",
+      "mode": "instant",
+      "layer": 27,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 13.739158630371094,
+      "hidden_state_vs_hook_state_max_abs_delta": 167.1874237060547
+    },
+    {
+      "problem_id": "train-000000",
+      "mode": "verify",
+      "layer": 18,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_vs_hook_state_max_abs_delta": 0.0
+    },
+    {
+      "problem_id": "train-000000",
+      "mode": "verify",
+      "layer": 27,
+      "base_vs_hook_run_logit_max_abs_delta": 0.0,
+      "self_hook_patch_logit_max_abs_delta": 0.0,
+      "hidden_state_patch_logit_max_abs_delta": 16.800487518310547,
+      "hidden_state_vs_hook_state_max_abs_delta": 253.92433166503906
+    }
+  ]
+}
