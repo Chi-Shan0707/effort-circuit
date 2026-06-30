@@ -8,7 +8,7 @@ TinyLoRA-GRPO-Coder/models/Qwen3-0.6B
 
 Core charter: 一切从第一性原理出发。See `FIRST_PRINCIPLES.md`.
 
-Comprehensive findings: see `docs/final_analysis_report.md`.
+Comprehensive findings: see `docs/current_analysis_report.md`. Earlier historical synthesis remains in `docs/final_analysis_report.md`.
 
 ## Setup
 
