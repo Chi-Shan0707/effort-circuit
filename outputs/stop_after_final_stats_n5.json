@@ -1,0 +1,231 @@
+{
+  "input": "outputs/stop_after_final_heldout_n5_hook_states.json",
+  "baseline": "baseline",
+  "bootstrap_iterations": 10000,
+  "metrics": [
+    {
+      "metric": "first_final_correct",
+      "baseline": "baseline",
+      "conditions": [
+        {
+          "condition": "baseline",
+          "n": 5,
+          "successes": 0,
+          "accuracy": 0.0,
+          "wilson95": {
+            "center": 0.21724123239158738,
+            "low": 0.0,
+            "high": 0.43448246478317476
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 0,
+            "baseline_right_candidate_wrong": 0,
+            "discordant_total": 0,
+            "exact_two_sided_p": 1.0
+          }
+        },
+        {
+          "condition": "layer18_t1",
+          "n": 5,
+          "successes": 0,
+          "accuracy": 0.0,
+          "wilson95": {
+            "center": 0.21724123239158738,
+            "low": 0.0,
+            "high": 0.43448246478317476
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 0,
+            "baseline_right_candidate_wrong": 0,
+            "discordant_total": 0,
+            "exact_two_sided_p": 1.0
+          }
+        },
+        {
+          "condition": "layer27_t0.75",
+          "n": 5,
+          "successes": 0,
+          "accuracy": 0.0,
+          "wilson95": {
+            "center": 0.21724123239158738,
+            "low": 0.0,
+            "high": 0.43448246478317476
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 0,
+            "baseline_right_candidate_wrong": 0,
+            "discordant_total": 0,
+            "exact_two_sided_p": 1.0
+          }
+        },
+        {
+          "condition": "layer27_t1",
+          "n": 5,
+          "successes": 0,
+          "accuracy": 0.0,
+          "wilson95": {
+            "center": 0.21724123239158738,
+            "low": 0.0,
+            "high": 0.43448246478317476
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 0,
+            "baseline_right_candidate_wrong": 0,
+            "discordant_total": 0,
+            "exact_two_sided_p": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "metric": "last_final_correct",
+      "baseline": "baseline",
+      "conditions": [
+        {
+          "condition": "baseline",
+          "n": 5,
+          "successes": 2,
+          "accuracy": 0.4,
+          "wilson95": {
+            "center": 0.44344824647831743,
+            "low": 0.11762077423264783,
+            "high": 0.769275718723987
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 0,
+            "baseline_right_candidate_wrong": 0,
+            "discordant_total": 0,
+            "exact_two_sided_p": 1.0
+          }
+        },
+        {
+          "condition": "layer18_t1",
+          "n": 5,
+          "successes": 0,
+          "accuracy": 0.0,
+          "wilson95": {
+            "center": 0.21724123239158738,
+            "low": 0.0,
+            "high": 0.43448246478317476
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": -0.4,
+            "low": -0.8,
+            "high": 0.0
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 0,
+            "baseline_right_candidate_wrong": 2,
+            "discordant_total": 2,
+            "exact_two_sided_p": 0.5
+          }
+        },
+        {
+          "condition": "layer27_t0.75",
+          "n": 5,
+          "successes": 3,
+          "accuracy": 0.6,
+          "wilson95": {
+            "center": 0.5565517535216824,
+            "low": 0.2307242812760128,
+            "high": 0.882379225767352
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": 0.2,
+            "low": 0.0,
+            "high": 0.6
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 1,
+            "baseline_right_candidate_wrong": 0,
+            "discordant_total": 1,
+            "exact_two_sided_p": 1.0
+          }
+        },
+        {
+          "condition": "layer27_t1",
+          "n": 5,
+          "successes": 1,
+          "accuracy": 0.2,
+          "wilson95": {
+            "center": 0.3303447394349524,
+            "low": 0.03622410863243014,
+            "high": 0.6244653702374747
+          },
+          "paired_diff_vs_baseline": {
+            "mean_diff": -0.2,
+            "low": -0.6,
+            "high": 0.0
+          },
+          "mcnemar": {
+            "baseline_wrong_candidate_right": 0,
+            "baseline_right_candidate_wrong": 1,
+            "discordant_total": 1,
+            "exact_two_sided_p": 1.0
+          }
+        }
+      ]
+    }
+  ],
+  "auxiliary": {
+    "conditions": [
+      {
+        "condition": "baseline",
+        "n": 5,
+        "strict_stop_rate": 0.2,
+        "strict_malformed_rate": 0.8,
+        "mean_generated_tokens": 105.4,
+        "mean_repetition_rate": 0.08002909937436345
+      },
+      {
+        "condition": "layer18_t1",
+        "n": 5,
+        "strict_stop_rate": 0.6,
+        "strict_malformed_rate": 0.4,
+        "mean_generated_tokens": 74.0,
+        "mean_repetition_rate": 0.04657411553963278
+      },
+      {
+        "condition": "layer27_t0.75",
+        "n": 5,
+        "strict_stop_rate": 0.2,
+        "strict_malformed_rate": 0.8,
+        "mean_generated_tokens": 105.8,
+        "mean_repetition_rate": 0.025113795518207284
+      },
+      {
+        "condition": "layer27_t1",
+        "n": 5,
+        "strict_stop_rate": 0.2,
+        "strict_malformed_rate": 0.8,
+        "mean_generated_tokens": 105.8,
+        "mean_repetition_rate": 0.08609423263279026
+      }
+    ]
+  }
+}
