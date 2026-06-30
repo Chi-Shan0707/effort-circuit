@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 import torch
@@ -44,6 +45,27 @@ def train(args: argparse.Namespace) -> None:
             optimizer.step()
             total += float(loss.item()) * len(batch)
         history.append(total / max(1, len(x)))
+    with torch.no_grad():
+        reconstruction, features = model(x)
+        mse = torch.mean((reconstruction - x) ** 2)
+        variance = torch.var(x)
+        explained_variance = 1.0 - float(mse.item() / (variance.item() + 1e-8))
+        l0 = float((features > 0).float().sum(dim=1).mean().item())
+        dead_feature_rate = float(((features > 0).sum(dim=0) == 0).float().mean().item())
+    metrics = {
+        "input_dim": x.shape[1],
+        "hidden_dim": args.hidden_dim,
+        "site": args.site,
+        "position": args.position,
+        "layer": args.layer,
+        "loss": history,
+        "final_loss": history[-1] if history else None,
+        "mse": float(mse.item()),
+        "explained_variance": explained_variance,
+        "l0": l0,
+        "dead_feature_rate": dead_feature_rate,
+        "num_examples": int(x.shape[0]),
+    }
     torch.save(
         {
             "model_state_dict": model.state_dict(),
@@ -53,9 +75,11 @@ def train(args: argparse.Namespace) -> None:
             "position": args.position,
             "layer": args.layer,
             "loss": history,
+            "metrics": metrics,
         },
         out / "sae.pt",
     )
+    (out / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
     print(f"wrote SAE to {out / 'sae.pt'}")
 
 

@@ -17,7 +17,7 @@ Continue the mechanistic-control project after the second-stage audit. The third
 | Process/content disentanglement | `docs/step_06_process_task_disentanglement.md` | Completed before this stage |
 | Task-out and verbosity controls | `docs/step_04_task_out_controls.md` | Completed before this stage |
 | CET controller | `docs/step_07_closed_loop_cet.md` | Completed before this stage |
-| Neuron/SAE after residual posture is clarified | Not yet started in third stage | Remaining optional next gate |
+| Neuron/SAE after residual posture is clarified | `docs/third_stage_neuron_sae_gate.md`, `outputs/third_stage_neurons_n8.json`, `outputs/third_stage_sae_layer18_smoke/metrics.json` | Smoke gate completed; scientific discovery still future work |
 
 ## Third-Stage Addition
 

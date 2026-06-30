@@ -1,0 +1,16 @@
+{
+  "layers": [
+    18,
+    27
+  ],
+  "sites": [
+    "resid_post",
+    "mlp_act"
+  ],
+  "positions": [
+    "prompt_last"
+  ],
+  "shards": [
+    "shard_00000.pt"
+  ]
+}
