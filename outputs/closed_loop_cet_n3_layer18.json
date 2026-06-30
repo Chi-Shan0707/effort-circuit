@@ -1,0 +1,5397 @@
+{
+  "model": "../TinyLoRA-GRPO-Coder/models/Qwen3-0.6B",
+  "train_dataset": "synthetic_math",
+  "train_n": 8,
+  "eval_dataset": "heldout_synthetic_math",
+  "eval_n": 3,
+  "layer": 18,
+  "alpha_max": 1.0,
+  "min_reasoning_tokens": 16,
+  "repetition_threshold": 0.18,
+  "summaries": [
+    {
+      "controller": "baseline",
+      "n": 3,
+      "accuracy": 0.0,
+      "strict_stop_rate": 0.0,
+      "mean_generated_tokens": 64.0,
+      "mean_repetition_rate": 0.0,
+      "mean_alpha": 0.0
+    },
+    {
+      "controller": "static_mean_direction",
+      "n": 3,
+      "accuracy": 0.0,
+      "strict_stop_rate": 0.0,
+      "mean_generated_tokens": 64.0,
+      "mean_repetition_rate": 0.0,
+      "mean_alpha": 1.0
+    },
+    {
+      "controller": "closed_loop_cet",
+      "n": 3,
+      "accuracy": 0.0,
+      "strict_stop_rate": 0.0,
+      "mean_generated_tokens": 64.0,
+      "mean_repetition_rate": 0.0,
+      "mean_alpha": 0.2747395833333333
+    }
+  ],
+  "rows": [
+    {
+      "problem_id": "heldout-000000",
+      "question": "Mia has 22 tokens and gets 14 more tokens for each of 9 rounds. How many tokens does she have?",
+      "gold_answer": "148",
+      "controller": "baseline",
+      "layer": 18,
+      "completion": " <brief reasoning>\nFinal answer: <number>\n\nOkay, let's see. Mia starts with 22 tokens. Then, for each of 9 rounds, she gets 14 more tokens. So, I need to figure out how many tokens she has in total after all those rounds.\n\nFirst, I should",
+      "extracted_answer": null,
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 0.0,
+      "max_alpha": 0.0,
+      "alpha_trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 0.0,
+          "continue_mass": 0.01142148207873106,
+          "final_mass": 7.152958278311417e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 0.0,
+          "continue_mass": 3.284671379333304e-07,
+          "final_mass": 1.429007596698284e-07,
+          "repetition": 0.0,
+          "token": "brief"
+        },
+        {
+          "step": 2,
+          "alpha": 0.0,
+          "continue_mass": 8.044256372130576e-10,
+          "final_mass": 1.0031222963391428e-08,
+          "repetition": 0.0,
+          "token": " reasoning"
+        },
+        {
+          "step": 3,
+          "alpha": 0.0,
+          "continue_mass": 2.3394491677208862e-08,
+          "final_mass": 1.3930879561030451e-08,
+          "repetition": 0.0,
+          "token": ">\\n"
+        },
+        {
+          "step": 4,
+          "alpha": 0.0,
+          "continue_mass": 1.990092890480355e-08,
+          "final_mass": 3.7133475416339934e-05,
+          "repetition": 0.0,
+          "token": "Final"
+        },
+        {
+          "step": 5,
+          "alpha": 0.0,
+          "continue_mass": 1.2490427581113295e-09,
+          "final_mass": 0.019696108996868134,
+          "repetition": 0.0,
+          "token": " answer"
+        },
+        {
+          "step": 6,
+          "alpha": 0.0,
+          "continue_mass": 2.3723298325784015e-10,
+          "final_mass": 5.715287132446178e-10,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 7,
+          "alpha": 0.0,
+          "continue_mass": 1.3117299204168376e-05,
+          "final_mass": 3.2429838938696776e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 8,
+          "alpha": 0.0,
+          "continue_mass": 1.3135339482772679e-09,
+          "final_mass": 4.178841450652726e-08,
+          "repetition": 0.0,
+          "token": "number"
+        },
+        {
+          "step": 9,
+          "alpha": 0.0,
+          "continue_mass": 2.5565364936142032e-08,
+          "final_mass": 1.1903779295607819e-07,
+          "repetition": 0.0,
+          "token": ">\\n\\n"
+        },
+        {
+          "step": 10,
+          "alpha": 0.0,
+          "continue_mass": 5.092076094115328e-07,
+          "final_mass": 1.02629189768777e-06,
+          "repetition": 0.0,
+          "token": "Okay"
+        },
+        {
+          "step": 11,
+          "alpha": 0.0,
+          "continue_mass": 1.195744800952525e-07,
+          "final_mass": 1.7030924936989322e-07,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 12,
+          "alpha": 0.0,
+          "continue_mass": 2.9297996661625803e-05,
+          "final_mass": 4.784974862559466e-06,
+          "repetition": 0.0,
+          "token": " let"
+        },
+        {
+          "step": 13,
+          "alpha": 0.0,
+          "continue_mass": 6.381618011808143e-10,
+          "final_mass": 1.5972502834249447e-11,
+          "repetition": 0.0,
+          "token": "'s"
+        },
+        {
+          "step": 14,
+          "alpha": 0.0,
+          "continue_mass": 5.259647162247916e-10,
+          "final_mass": 6.713123945623067e-10,
+          "repetition": 0.0,
+          "token": " see"
+        },
+        {
+          "step": 15,
+          "alpha": 0.0,
+          "continue_mass": 1.7909092264734028e-10,
+          "final_mass": 5.159774274510198e-10,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 16,
+          "alpha": 0.0,
+          "continue_mass": 0.002562976209446788,
+          "final_mass": 0.015525545924901962,
+          "repetition": 0.0,
+          "token": " Mia"
+        },
+        {
+          "step": 17,
+          "alpha": 0.0,
+          "continue_mass": 7.460467139897009e-12,
+          "final_mass": 4.1571089561161234e-13,
+          "repetition": 0.0,
+          "token": " starts"
+        },
+        {
+          "step": 18,
+          "alpha": 0.0,
+          "continue_mass": 1.031608626241064e-14,
+          "final_mass": 1.6375750173249452e-16,
+          "repetition": 0.0,
+          "token": " with"
+        },
+        {
+          "step": 19,
+          "alpha": 0.0,
+          "continue_mass": 4.855595526348511e-12,
+          "final_mass": 2.4968965697119705e-12,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 20,
+          "alpha": 0.0,
+          "continue_mass": 1.3069874018437912e-15,
+          "final_mass": 5.5975812330297855e-15,
+          "repetition": 0.0,
+          "token": "2"
+        },
+        {
+          "step": 21,
+          "alpha": 0.0,
+          "continue_mass": 3.8700313320228343e-16,
+          "final_mass": 1.0458441531201954e-16,
+          "repetition": 0.0,
+          "token": "2"
+        },
+        {
+          "step": 22,
+          "alpha": 0.0,
+          "continue_mass": 6.906932165963442e-13,
+          "final_mass": 3.7137599852993253e-13,
+          "repetition": 0.0,
+          "token": " tokens"
+        },
+        {
+          "step": 23,
+          "alpha": 0.0,
+          "continue_mass": 3.982796731305527e-11,
+          "final_mass": 2.5538659728652213e-12,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 24,
+          "alpha": 0.0,
+          "continue_mass": 4.7289599024225026e-05,
+          "final_mass": 4.8835765483090654e-05,
+          "repetition": 0.0,
+          "token": " Then"
+        },
+        {
+          "step": 25,
+          "alpha": 0.0,
+          "continue_mass": 2.9558621175707067e-12,
+          "final_mass": 3.7025588216048344e-13,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 26,
+          "alpha": 0.0,
+          "continue_mass": 2.5523607533051162e-11,
+          "final_mass": 2.926445977907699e-12,
+          "repetition": 0.0,
+          "token": " for"
+        },
+        {
+          "step": 27,
+          "alpha": 0.0,
+          "continue_mass": 3.3268518690766913e-13,
+          "final_mass": 1.10216530184188e-13,
+          "repetition": 0.0,
+          "token": " each"
+        },
+        {
+          "step": 28,
+          "alpha": 0.0,
+          "continue_mass": 1.7321565015659957e-10,
+          "final_mass": 3.563351350099886e-11,
+          "repetition": 0.0,
+          "token": " of"
+        },
+        {
+          "step": 29,
+          "alpha": 0.0,
+          "continue_mass": 2.0260839672658904e-09,
+          "final_mass": 8.966308251423527e-11,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 30,
+          "alpha": 0.0,
+          "continue_mass": 4.766690616167784e-15,
+          "final_mass": 2.2113048696835447e-15,
+          "repetition": 0.0,
+          "token": "9"
+        },
+        {
+          "step": 31,
+          "alpha": 0.0,
+          "continue_mass": 1.5847894963569656e-14,
+          "final_mass": 9.375191730798607e-14,
+          "repetition": 0.0,
+          "token": " rounds"
+        },
+        {
+          "step": 32,
+          "alpha": 0.0,
+          "continue_mass": 8.547279095431903e-13,
+          "final_mass": 5.159984852592947e-13,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 33,
+          "alpha": 0.0,
+          "continue_mass": 3.691513674602964e-12,
+          "final_mass": 9.126317323387978e-13,
+          "repetition": 0.0,
+          "token": " she"
+        },
+        {
+          "step": 34,
+          "alpha": 0.0,
+          "continue_mass": 7.77690585540558e-12,
+          "final_mass": 9.089123551020428e-12,
+          "repetition": 0.0,
+          "token": " gets"
+        },
+        {
+          "step": 35,
+          "alpha": 0.0,
+          "continue_mass": 3.33565952637116e-11,
+          "final_mass": 1.7966241341871303e-11,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 36,
+          "alpha": 0.0,
+          "continue_mass": 6.136866188832801e-14,
+          "final_mass": 7.64195225654539e-14,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 37,
+          "alpha": 0.0,
+          "continue_mass": 3.3901808146561687e-16,
+          "final_mass": 2.1780835492779614e-16,
+          "repetition": 0.0,
+          "token": "4"
+        },
+        {
+          "step": 38,
+          "alpha": 0.0,
+          "continue_mass": 4.2108406605317894e-13,
+          "final_mass": 1.0650299002087915e-12,
+          "repetition": 0.0,
+          "token": " more"
+        },
+        {
+          "step": 39,
+          "alpha": 0.0,
+          "continue_mass": 9.069638789993562e-11,
+          "final_mass": 2.9968769132970863e-10,
+          "repetition": 0.0,
+          "token": " tokens"
+        },
+        {
+          "step": 40,
+          "alpha": 0.0,
+          "continue_mass": 2.365700968454121e-10,
+          "final_mass": 2.0742869644152506e-09,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 41,
+          "alpha": 0.0,
+          "continue_mass": 0.05559687688946724,
+          "final_mass": 0.8057867288589478,
+          "repetition": 0.0,
+          "token": " So"
+        },
+        {
+          "step": 42,
+          "alpha": 0.0,
+          "continue_mass": 2.735051566560287e-06,
+          "final_mass": 1.1374987757273303e-11,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 43,
+          "alpha": 0.0,
+          "continue_mass": 2.315700612598448e-06,
+          "final_mass": 3.369564002819736e-11,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 44,
+          "alpha": 0.0,
+          "continue_mass": 2.993910327986349e-11,
+          "final_mass": 6.381815242277947e-14,
+          "repetition": 0.0,
+          "token": " need"
+        },
+        {
+          "step": 45,
+          "alpha": 0.0,
+          "continue_mass": 1.4317523729101556e-11,
+          "final_mass": 1.9442608982817998e-16,
+          "repetition": 0.0,
+          "token": " to"
+        },
+        {
+          "step": 46,
+          "alpha": 0.0,
+          "continue_mass": 3.7804662156304403e-07,
+          "final_mass": 1.3792976092871778e-13,
+          "repetition": 0.0,
+          "token": " figure"
+        },
+        {
+          "step": 47,
+          "alpha": 0.0,
+          "continue_mass": 9.452436663254238e-13,
+          "final_mass": 6.913999076191832e-16,
+          "repetition": 0.0,
+          "token": " out"
+        },
+        {
+          "step": 48,
+          "alpha": 0.0,
+          "continue_mass": 6.281691278253732e-10,
+          "final_mass": 1.5019603399543668e-12,
+          "repetition": 0.0,
+          "token": " how"
+        },
+        {
+          "step": 49,
+          "alpha": 0.0,
+          "continue_mass": 2.9839505866213756e-10,
+          "final_mass": 7.139138455750094e-13,
+          "repetition": 0.0,
+          "token": " many"
+        },
+        {
+          "step": 50,
+          "alpha": 0.0,
+          "continue_mass": 7.322675799059652e-11,
+          "final_mass": 9.031582426377582e-11,
+          "repetition": 0.0,
+          "token": " tokens"
+        },
+        {
+          "step": 51,
+          "alpha": 0.0,
+          "continue_mass": 1.2333371086567513e-12,
+          "final_mass": 5.370820108097085e-11,
+          "repetition": 0.0,
+          "token": " she"
+        },
+        {
+          "step": 52,
+          "alpha": 0.0,
+          "continue_mass": 2.158202609681137e-11,
+          "final_mass": 1.847714869995798e-08,
+          "repetition": 0.0,
+          "token": " has"
+        },
+        {
+          "step": 53,
+          "alpha": 0.0,
+          "continue_mass": 1.7214986380853503e-11,
+          "final_mass": 4.928060737263706e-10,
+          "repetition": 0.0,
+          "token": " in"
+        },
+        {
+          "step": 54,
+          "alpha": 0.0,
+          "continue_mass": 2.398799339503252e-14,
+          "final_mass": 4.132717388791174e-13,
+          "repetition": 0.0,
+          "token": " total"
+        },
+        {
+          "step": 55,
+          "alpha": 0.0,
+          "continue_mass": 4.2398115573938355e-10,
+          "final_mass": 1.3935946840959446e-09,
+          "repetition": 0.0,
+          "token": " after"
+        },
+        {
+          "step": 56,
+          "alpha": 0.0,
+          "continue_mass": 1.0742943340469324e-10,
+          "final_mass": 1.5699712363481666e-11,
+          "repetition": 0.0,
+          "token": " all"
+        },
+        {
+          "step": 57,
+          "alpha": 0.0,
+          "continue_mass": 5.533524305434412e-09,
+          "final_mass": 2.1275101472206792e-11,
+          "repetition": 0.0,
+          "token": " those"
+        },
+        {
+          "step": 58,
+          "alpha": 0.0,
+          "continue_mass": 2.9234573095671124e-11,
+          "final_mass": 1.754459945380038e-11,
+          "repetition": 0.0,
+          "token": " rounds"
+        },
+        {
+          "step": 59,
+          "alpha": 0.0,
+          "continue_mass": 2.561310885607071e-10,
+          "final_mass": 2.2364525509299682e-10,
+          "repetition": 0.0,
+          "token": ".\\n\\n"
+        },
+        {
+          "step": 60,
+          "alpha": 0.0,
+          "continue_mass": 1.2312714716244955e-05,
+          "final_mass": 1.7823330367150447e-08,
+          "repetition": 0.0,
+          "token": "First"
+        },
+        {
+          "step": 61,
+          "alpha": 0.0,
+          "continue_mass": 1.068774366785874e-07,
+          "final_mass": 6.045676112509391e-13,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 62,
+          "alpha": 0.0,
+          "continue_mass": 4.7597087160511364e-08,
+          "final_mass": 2.0278584367261487e-11,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 63,
+          "alpha": 0.0,
+          "continue_mass": 8.938292883620136e-10,
+          "final_mass": 1.1358676586109562e-12,
+          "repetition": 0.0,
+          "token": " should"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000000",
+      "question": "Mia has 22 tokens and gets 14 more tokens for each of 9 rounds. How many tokens does she have?",
+      "gold_answer": "148",
+      "controller": "static_mean_direction",
+      "layer": 18,
+      "completion": " <Step 1, < < For ... <  < < < < < ... < ... < < < < < < ... < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < <1",
+      "extracted_answer": "1",
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 1.0,
+      "max_alpha": 1.0,
+      "alpha_trace": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 1.0,
+          "continue_mass": 0.01142148207873106,
+          "final_mass": 7.152958278311417e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 1.0,
+          "continue_mass": 3.284671379333304e-07,
+          "final_mass": 1.429007596698284e-07,
+          "repetition": 0.0,
+          "token": "Step"
+        },
+        {
+          "step": 2,
+          "alpha": 1.0,
+          "continue_mass": 0.00363619695417583,
+          "final_mass": 0.0008807249832898378,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 3,
+          "alpha": 1.0,
+          "continue_mass": 0.0014150016941130161,
+          "final_mass": 0.0006905630580149591,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 4,
+          "alpha": 1.0,
+          "continue_mass": 0.0036309752613306046,
+          "final_mass": 0.0004888086696155369,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 5,
+          "alpha": 1.0,
+          "continue_mass": 0.00031551779829896986,
+          "final_mass": 7.542111416114494e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 6,
+          "alpha": 1.0,
+          "continue_mass": 7.209904140381695e-08,
+          "final_mass": 4.969076705663156e-09,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 7,
+          "alpha": 1.0,
+          "continue_mass": 1.2299771697144024e-05,
+          "final_mass": 1.1904945722562843e-06,
+          "repetition": 0.0,
+          "token": " For"
+        },
+        {
+          "step": 8,
+          "alpha": 1.0,
+          "continue_mass": 2.1321950498531805e-06,
+          "final_mass": 3.1850647701503476e-06,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 9,
+          "alpha": 1.0,
+          "continue_mass": 0.0003589434491004795,
+          "final_mass": 0.00010803645272972062,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 10,
+          "alpha": 1.0,
+          "continue_mass": 0.00020473223412409425,
+          "final_mass": 0.014654280617833138,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 11,
+          "alpha": 1.0,
+          "continue_mass": 8.482950761390384e-06,
+          "final_mass": 5.63310868528788e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 12,
+          "alpha": 1.0,
+          "continue_mass": 8.928989700507373e-06,
+          "final_mass": 1.671981294748548e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 13,
+          "alpha": 1.0,
+          "continue_mass": 0.00018975559214595705,
+          "final_mass": 0.0002907791349571198,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 14,
+          "alpha": 1.0,
+          "continue_mass": 0.00014959876716602594,
+          "final_mass": 9.558397141518071e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 15,
+          "alpha": 1.0,
+          "continue_mass": 1.4851304968033219e-06,
+          "final_mass": 1.0171752364840358e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 16,
+          "alpha": 1.0,
+          "continue_mass": 8.506260201102123e-06,
+          "final_mass": 5.980079549772199e-06,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 17,
+          "alpha": 1.0,
+          "continue_mass": 6.49872818030417e-05,
+          "final_mass": 3.1715560908196494e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 18,
+          "alpha": 1.0,
+          "continue_mass": 0.0010620609391480684,
+          "final_mass": 0.0005454019992612302,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 19,
+          "alpha": 1.0,
+          "continue_mass": 0.0017209264915436506,
+          "final_mass": 0.0022040228359401226,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 20,
+          "alpha": 1.0,
+          "continue_mass": 6.914715049788356e-05,
+          "final_mass": 6.0908321756869555e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 21,
+          "alpha": 1.0,
+          "continue_mass": 5.937444802839309e-05,
+          "final_mass": 1.7115251466748305e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 22,
+          "alpha": 1.0,
+          "continue_mass": 0.0008697659941390157,
+          "final_mass": 0.00016092826263047755,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 23,
+          "alpha": 1.0,
+          "continue_mass": 0.0006056688725948334,
+          "final_mass": 0.00011045095016015694,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 24,
+          "alpha": 1.0,
+          "continue_mass": 3.6866869777441025e-05,
+          "final_mass": 0.00015733380860183388,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 25,
+          "alpha": 1.0,
+          "continue_mass": 1.944161886058282e-05,
+          "final_mass": 5.2369118748174515e-06,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 26,
+          "alpha": 1.0,
+          "continue_mass": 3.619578274083324e-05,
+          "final_mass": 3.325472425785847e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 27,
+          "alpha": 1.0,
+          "continue_mass": 0.00029715735581703484,
+          "final_mass": 0.00010086187103297561,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 28,
+          "alpha": 1.0,
+          "continue_mass": 0.00015953717229422182,
+          "final_mass": 8.29812342999503e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 29,
+          "alpha": 1.0,
+          "continue_mass": 3.672387174447067e-05,
+          "final_mass": 9.17309989745263e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 30,
+          "alpha": 1.0,
+          "continue_mass": 0.0005767602706328034,
+          "final_mass": 9.167849930236116e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 31,
+          "alpha": 1.0,
+          "continue_mass": 0.0003119305765721947,
+          "final_mass": 7.678875408601016e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 32,
+          "alpha": 1.0,
+          "continue_mass": 0.00014804456441197544,
+          "final_mass": 4.9714421038515866e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 33,
+          "alpha": 1.0,
+          "continue_mass": 0.00031575982575304806,
+          "final_mass": 0.00020882963144686073,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 34,
+          "alpha": 1.0,
+          "continue_mass": 0.0002761514042504132,
+          "final_mass": 0.0002147584455087781,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 35,
+          "alpha": 1.0,
+          "continue_mass": 8.696267468621954e-05,
+          "final_mass": 4.334246477810666e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 36,
+          "alpha": 1.0,
+          "continue_mass": 0.00010868283425224945,
+          "final_mass": 0.00011618084681686014,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 37,
+          "alpha": 1.0,
+          "continue_mass": 0.0003184169763699174,
+          "final_mass": 4.489111597649753e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 38,
+          "alpha": 1.0,
+          "continue_mass": 0.0003631344297900796,
+          "final_mass": 0.00012983429769519717,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 39,
+          "alpha": 1.0,
+          "continue_mass": 0.00035440202918834984,
+          "final_mass": 8.045884897001088e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 40,
+          "alpha": 1.0,
+          "continue_mass": 1.4567684957000893e-05,
+          "final_mass": 2.4242468498414382e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 41,
+          "alpha": 1.0,
+          "continue_mass": 0.0001808192319003865,
+          "final_mass": 0.00011874771735165268,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 42,
+          "alpha": 1.0,
+          "continue_mass": 0.0003501443425193429,
+          "final_mass": 0.00019224517745897174,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 43,
+          "alpha": 1.0,
+          "continue_mass": 0.0007461271015927196,
+          "final_mass": 0.00027545972261577845,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 44,
+          "alpha": 1.0,
+          "continue_mass": 0.0007033483125269413,
+          "final_mass": 9.834332740865648e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 45,
+          "alpha": 1.0,
+          "continue_mass": 0.000339362770318985,
+          "final_mass": 0.0001092859311029315,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 46,
+          "alpha": 1.0,
+          "continue_mass": 5.607668572338298e-05,
+          "final_mass": 6.77707648719661e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 47,
+          "alpha": 1.0,
+          "continue_mass": 0.000120808974315878,
+          "final_mass": 0.0009153548162430525,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 48,
+          "alpha": 1.0,
+          "continue_mass": 0.0005423142574727535,
+          "final_mass": 0.00014039568486623466,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 49,
+          "alpha": 1.0,
+          "continue_mass": 0.0004149795859120786,
+          "final_mass": 0.00028595581534318626,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 50,
+          "alpha": 1.0,
+          "continue_mass": 0.0011011905735358596,
+          "final_mass": 0.0004759316798299551,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 51,
+          "alpha": 1.0,
+          "continue_mass": 0.00018273158639203757,
+          "final_mass": 0.00028869532980024815,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 52,
+          "alpha": 1.0,
+          "continue_mass": 0.0003913433465640992,
+          "final_mass": 0.0001381301408400759,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 53,
+          "alpha": 1.0,
+          "continue_mass": 0.00034493496059440076,
+          "final_mass": 0.000264171656453982,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 54,
+          "alpha": 1.0,
+          "continue_mass": 0.00028242627740837634,
+          "final_mass": 0.00027124324697069824,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 55,
+          "alpha": 1.0,
+          "continue_mass": 0.00016094822785817087,
+          "final_mass": 0.00015639193588867784,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 56,
+          "alpha": 1.0,
+          "continue_mass": 0.00032049574656412005,
+          "final_mass": 0.000489874801132828,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 57,
+          "alpha": 1.0,
+          "continue_mass": 0.00030098261777311563,
+          "final_mass": 0.00037226080894470215,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 58,
+          "alpha": 1.0,
+          "continue_mass": 0.0002795586478896439,
+          "final_mass": 0.00033812643960118294,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 59,
+          "alpha": 1.0,
+          "continue_mass": 0.000665918632876128,
+          "final_mass": 0.00033331156009808183,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 60,
+          "alpha": 1.0,
+          "continue_mass": 0.0007021641358733177,
+          "final_mass": 0.0007744033937342465,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 61,
+          "alpha": 1.0,
+          "continue_mass": 0.0021305992268025875,
+          "final_mass": 0.0011103443102911115,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 62,
+          "alpha": 1.0,
+          "continue_mass": 0.00045527657493948936,
+          "final_mass": 0.0015754287596791983,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 63,
+          "alpha": 1.0,
+          "continue_mass": 0.0011786626419052482,
+          "final_mass": 0.001883653923869133,
+          "repetition": 0.0,
+          "token": "1"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000000",
+      "question": "Mia has 22 tokens and gets 14 more tokens for each of 9 rounds. How many tokens does she have?",
+      "gold_answer": "148",
+      "controller": "closed_loop_cet",
+      "layer": 18,
+      "completion": " <Step 1, < < For ...s your, < < < <s\n >\n <: <s < < < < <,\n < < < < <brief < < < < < <\n < <\n < < < < < < < < < < < < < < < < <",
+      "extracted_answer": null,
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 0.3203125,
+      "max_alpha": 1.0,
+      "alpha_trace": [
+        0.5,
+        0.5,
+        1.0,
+        1.0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1.0,
+        0.5,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 0.5,
+          "continue_mass": 0.01142148207873106,
+          "final_mass": 7.152958278311417e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 0.5,
+          "continue_mass": 3.284671379333304e-07,
+          "final_mass": 1.429007596698284e-07,
+          "repetition": 0.0,
+          "token": "Step"
+        },
+        {
+          "step": 2,
+          "alpha": 1.0,
+          "continue_mass": 0.0024602285120636225,
+          "final_mass": 0.00366553314961493,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 3,
+          "alpha": 1.0,
+          "continue_mass": 0.001487684901803732,
+          "final_mass": 0.001597128459252417,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 4,
+          "alpha": 0.5,
+          "continue_mass": 0.0036987625062465668,
+          "final_mass": 0.0008066871087066829,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 5,
+          "alpha": 0.5,
+          "continue_mass": 0.0002870098687708378,
+          "final_mass": 9.162874630419537e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 6,
+          "alpha": 0.5,
+          "continue_mass": 7.863389583917524e-08,
+          "final_mass": 2.620516070805934e-08,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 7,
+          "alpha": 0.5,
+          "continue_mass": 1.0675071280275006e-05,
+          "final_mass": 1.6990105677905376e-06,
+          "repetition": 0.0,
+          "token": " For"
+        },
+        {
+          "step": 8,
+          "alpha": 1.0,
+          "continue_mass": 1.2683982504313462e-06,
+          "final_mass": 2.6154282295465237e-06,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 9,
+          "alpha": 0.5,
+          "continue_mass": 0.00016869940736796707,
+          "final_mass": 5.3633793868357316e-05,
+          "repetition": 0.0,
+          "token": "s"
+        },
+        {
+          "step": 10,
+          "alpha": 0.5,
+          "continue_mass": 0.00023122609127312899,
+          "final_mass": 0.0001873505098046735,
+          "repetition": 0.0,
+          "token": " your"
+        },
+        {
+          "step": 11,
+          "alpha": 1.0,
+          "continue_mass": 4.972075475961901e-05,
+          "final_mass": 0.00024947425117716193,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 12,
+          "alpha": 1.0,
+          "continue_mass": 3.044514960492961e-05,
+          "final_mass": 3.966787699027918e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 13,
+          "alpha": 1.0,
+          "continue_mass": 0.00018270623695570976,
+          "final_mass": 0.00025544516392983496,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 14,
+          "alpha": 0.5,
+          "continue_mass": 0.00017728537204675376,
+          "final_mass": 7.091135921655223e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 15,
+          "alpha": 0.5,
+          "continue_mass": 3.455001888141851e-06,
+          "final_mass": 2.5415452000743244e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 16,
+          "alpha": 0.25,
+          "continue_mass": 9.228572707797866e-06,
+          "final_mass": 5.1809438446071e-06,
+          "repetition": 0.0,
+          "token": "s"
+        },
+        {
+          "step": 17,
+          "alpha": 0.25,
+          "continue_mass": 0.0003348391910549253,
+          "final_mass": 5.2871193474857137e-05,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 18,
+          "alpha": 0.0,
+          "continue_mass": 6.818625843152404e-05,
+          "final_mass": 0.0006729932501912117,
+          "repetition": 0.0,
+          "token": " >"
+        },
+        {
+          "step": 19,
+          "alpha": 0.25,
+          "continue_mass": 1.8619426555233076e-05,
+          "final_mass": 8.482707016810309e-06,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 20,
+          "alpha": 0.25,
+          "continue_mass": 0.012639105319976807,
+          "final_mass": 0.0023873515892773867,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 21,
+          "alpha": 0.25,
+          "continue_mass": 0.00022740772692486644,
+          "final_mass": 0.00019794682157225907,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 22,
+          "alpha": 0.25,
+          "continue_mass": 0.00010532950545893982,
+          "final_mass": 1.8484821339370683e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 23,
+          "alpha": 0.25,
+          "continue_mass": 0.0008410292793996632,
+          "final_mass": 0.00014300880138762295,
+          "repetition": 0.0,
+          "token": "s"
+        },
+        {
+          "step": 24,
+          "alpha": 0.25,
+          "continue_mass": 0.00010901995847234502,
+          "final_mass": 2.1769708837382495e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 25,
+          "alpha": 0.25,
+          "continue_mass": 0.00043926536454819143,
+          "final_mass": 0.00015352877380792052,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 26,
+          "alpha": 0.25,
+          "continue_mass": 0.0001518288772786036,
+          "final_mass": 2.340525134059135e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 27,
+          "alpha": 0.25,
+          "continue_mass": 0.0002444847777951509,
+          "final_mass": 7.225060107884929e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 28,
+          "alpha": 0.0,
+          "continue_mass": 0.00015693169552832842,
+          "final_mass": 0.000270928256213665,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 29,
+          "alpha": 0.25,
+          "continue_mass": 5.3390307584777474e-05,
+          "final_mass": 3.6302488297224045e-05,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 30,
+          "alpha": 0.25,
+          "continue_mass": 5.320311902323738e-05,
+          "final_mass": 4.209578764857724e-05,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 31,
+          "alpha": 0.25,
+          "continue_mass": 0.00010931552242254838,
+          "final_mass": 7.167935837060213e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 32,
+          "alpha": 0.25,
+          "continue_mass": 0.00046483680489473045,
+          "final_mass": 0.00015689800784457475,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 33,
+          "alpha": 0.25,
+          "continue_mass": 0.0009726289426907897,
+          "final_mass": 0.00034675694769248366,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 34,
+          "alpha": 0.25,
+          "continue_mass": 0.000685449515003711,
+          "final_mass": 0.00041330885142087936,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 35,
+          "alpha": 0.25,
+          "continue_mass": 0.00043618626659736037,
+          "final_mass": 0.00010776648559840396,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 36,
+          "alpha": 0.25,
+          "continue_mass": 0.00011491341138025746,
+          "final_mass": 3.0319188226712868e-05,
+          "repetition": 0.0,
+          "token": "brief"
+        },
+        {
+          "step": 37,
+          "alpha": 0.25,
+          "continue_mass": 0.0008241684990935028,
+          "final_mass": 0.0007089286227710545,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 38,
+          "alpha": 0.25,
+          "continue_mass": 0.0003491398529149592,
+          "final_mass": 0.00010657521488610655,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 39,
+          "alpha": 0.25,
+          "continue_mass": 0.0003256279742345214,
+          "final_mass": 0.00017987872706726193,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 40,
+          "alpha": 0.25,
+          "continue_mass": 0.00039278168696910143,
+          "final_mass": 0.00037116496241651475,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 41,
+          "alpha": 0.25,
+          "continue_mass": 0.0013075205497443676,
+          "final_mass": 0.0002638701698742807,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 42,
+          "alpha": 0.25,
+          "continue_mass": 0.00019554667233023793,
+          "final_mass": 7.414552237605676e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 43,
+          "alpha": 0.25,
+          "continue_mass": 0.0021889477502554655,
+          "final_mass": 0.0007613523048348725,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 44,
+          "alpha": 0.25,
+          "continue_mass": 0.03289659321308136,
+          "final_mass": 0.009811959229409695,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 45,
+          "alpha": 0.25,
+          "continue_mass": 0.0005959388217888772,
+          "final_mass": 0.00017461345123592764,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 46,
+          "alpha": 0.25,
+          "continue_mass": 0.00042671457049436867,
+          "final_mass": 0.00011522821296239272,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 47,
+          "alpha": 0.25,
+          "continue_mass": 7.937070040497929e-05,
+          "final_mass": 5.138034248375334e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 48,
+          "alpha": 0.25,
+          "continue_mass": 0.00017526018200442195,
+          "final_mass": 4.7364643251057714e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 49,
+          "alpha": 0.0,
+          "continue_mass": 0.0009080776362679899,
+          "final_mass": 0.002701427787542343,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 50,
+          "alpha": 0.0,
+          "continue_mass": 0.000390685599995777,
+          "final_mass": 0.0005645521450787783,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 51,
+          "alpha": 0.0,
+          "continue_mass": 0.0010541806695982814,
+          "final_mass": 0.0013034988660365343,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 52,
+          "alpha": 0.0,
+          "continue_mass": 0.0005364828975871205,
+          "final_mass": 0.001123499358072877,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 53,
+          "alpha": 0.0,
+          "continue_mass": 0.000349414098309353,
+          "final_mass": 0.0005758259794674814,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 54,
+          "alpha": 0.0,
+          "continue_mass": 0.0007202307460829616,
+          "final_mass": 0.0007481806678697467,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 55,
+          "alpha": 0.0,
+          "continue_mass": 0.0021003950387239456,
+          "final_mass": 0.0034666967112571,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 56,
+          "alpha": 0.25,
+          "continue_mass": 0.0009438953129574656,
+          "final_mass": 0.0008300539338961244,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 57,
+          "alpha": 0.0,
+          "continue_mass": 0.00021549496159423143,
+          "final_mass": 0.000282568100374192,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 58,
+          "alpha": 0.25,
+          "continue_mass": 0.00042546234908513725,
+          "final_mass": 0.0002805934054777026,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 59,
+          "alpha": 0.25,
+          "continue_mass": 0.0012581807095557451,
+          "final_mass": 0.0006801782874390483,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 60,
+          "alpha": 0.25,
+          "continue_mass": 0.0007690041675232351,
+          "final_mass": 0.0004434480797499418,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 61,
+          "alpha": 0.25,
+          "continue_mass": 0.0007480066269636154,
+          "final_mass": 0.00014343336806632578,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 62,
+          "alpha": 0.25,
+          "continue_mass": 0.00048693057033233345,
+          "final_mass": 0.00012767109728883952,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 63,
+          "alpha": 0.25,
+          "continue_mass": 0.0001970928569789976,
+          "final_mass": 7.26753132767044e-05,
+          "repetition": 0.0,
+          "token": " <"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000001",
+      "question": "Mia has 15 tokens and gets 22 more tokens for each of 11 rounds. How many tokens does she have?",
+      "gold_answer": "257",
+      "controller": "baseline",
+      "layer": 18,
+      "completion": " <brief reasoning>\nFinal answer: <number>\n\nOkay, let's see. Mia starts with 15 tokens. Then, for each of 11 rounds, she gets 22 more tokens. So, I need to find out how many tokens she has in total after all those rounds.\n\nFirst, I",
+      "extracted_answer": null,
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 0.0,
+      "max_alpha": 0.0,
+      "alpha_trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 0.0,
+          "continue_mass": 0.011040625162422657,
+          "final_mass": 6.08978807576932e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 0.0,
+          "continue_mass": 3.722916801507381e-07,
+          "final_mass": 1.198255574763607e-07,
+          "repetition": 0.0,
+          "token": "brief"
+        },
+        {
+          "step": 2,
+          "alpha": 0.0,
+          "continue_mass": 9.027217862112025e-10,
+          "final_mass": 9.33660881941023e-09,
+          "repetition": 0.0,
+          "token": " reasoning"
+        },
+        {
+          "step": 3,
+          "alpha": 0.0,
+          "continue_mass": 2.292321532593178e-08,
+          "final_mass": 1.0059548749552505e-08,
+          "repetition": 0.0,
+          "token": ">\\n"
+        },
+        {
+          "step": 4,
+          "alpha": 0.0,
+          "continue_mass": 1.214353595457851e-08,
+          "final_mass": 3.8865007809363306e-05,
+          "repetition": 0.0,
+          "token": "Final"
+        },
+        {
+          "step": 5,
+          "alpha": 0.0,
+          "continue_mass": 3.774814238965973e-09,
+          "final_mass": 0.054873306304216385,
+          "repetition": 0.0,
+          "token": " answer"
+        },
+        {
+          "step": 6,
+          "alpha": 0.0,
+          "continue_mass": 5.102194222672551e-10,
+          "final_mass": 1.5401818709293025e-09,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 7,
+          "alpha": 0.0,
+          "continue_mass": 9.526655958325136e-06,
+          "final_mass": 3.0904902814654633e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 8,
+          "alpha": 0.0,
+          "continue_mass": 2.819621869321054e-09,
+          "final_mass": 6.650430606214286e-08,
+          "repetition": 0.0,
+          "token": "number"
+        },
+        {
+          "step": 9,
+          "alpha": 0.0,
+          "continue_mass": 1.9333036505031487e-08,
+          "final_mass": 9.231144559862514e-08,
+          "repetition": 0.0,
+          "token": ">\\n\\n"
+        },
+        {
+          "step": 10,
+          "alpha": 0.0,
+          "continue_mass": 4.61013001995525e-07,
+          "final_mass": 1.3777184904029127e-06,
+          "repetition": 0.0,
+          "token": "Okay"
+        },
+        {
+          "step": 11,
+          "alpha": 0.0,
+          "continue_mass": 1.0869683819692e-07,
+          "final_mass": 1.624923271492662e-07,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 12,
+          "alpha": 0.0,
+          "continue_mass": 2.218310874013696e-05,
+          "final_mass": 3.2691318665456492e-06,
+          "repetition": 0.0,
+          "token": " let"
+        },
+        {
+          "step": 13,
+          "alpha": 0.0,
+          "continue_mass": 4.6200185344069666e-10,
+          "final_mass": 1.176597100999155e-11,
+          "repetition": 0.0,
+          "token": "'s"
+        },
+        {
+          "step": 14,
+          "alpha": 0.0,
+          "continue_mass": 5.226632460164637e-10,
+          "final_mass": 5.407833070236734e-10,
+          "repetition": 0.0,
+          "token": " see"
+        },
+        {
+          "step": 15,
+          "alpha": 0.0,
+          "continue_mass": 1.8522681999311175e-10,
+          "final_mass": 4.94336405143514e-10,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 16,
+          "alpha": 0.0,
+          "continue_mass": 0.0018525674240663648,
+          "final_mass": 0.01874558813869953,
+          "repetition": 0.0,
+          "token": " Mia"
+        },
+        {
+          "step": 17,
+          "alpha": 0.0,
+          "continue_mass": 4.077425896920062e-12,
+          "final_mass": 2.348383260856318e-13,
+          "repetition": 0.0,
+          "token": " starts"
+        },
+        {
+          "step": 18,
+          "alpha": 0.0,
+          "continue_mass": 2.4089125740802894e-14,
+          "final_mass": 3.118639786518773e-16,
+          "repetition": 0.0,
+          "token": " with"
+        },
+        {
+          "step": 19,
+          "alpha": 0.0,
+          "continue_mass": 1.2340725663584351e-11,
+          "final_mass": 2.470223027864482e-12,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 20,
+          "alpha": 0.0,
+          "continue_mass": 1.2601714038051014e-14,
+          "final_mass": 1.1377523577405738e-14,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 21,
+          "alpha": 0.0,
+          "continue_mass": 8.984078248458786e-16,
+          "final_mass": 3.476117865808834e-16,
+          "repetition": 0.0,
+          "token": "5"
+        },
+        {
+          "step": 22,
+          "alpha": 0.0,
+          "continue_mass": 3.6508764761356005e-12,
+          "final_mass": 1.2555847203957193e-12,
+          "repetition": 0.0,
+          "token": " tokens"
+        },
+        {
+          "step": 23,
+          "alpha": 0.0,
+          "continue_mass": 4.597306910159027e-11,
+          "final_mass": 4.6757190133583926e-12,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 24,
+          "alpha": 0.0,
+          "continue_mass": 8.199240255635232e-05,
+          "final_mass": 0.0001843674253905192,
+          "repetition": 0.0,
+          "token": " Then"
+        },
+        {
+          "step": 25,
+          "alpha": 0.0,
+          "continue_mass": 7.116767678644331e-12,
+          "final_mass": 9.032609729620056e-13,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 26,
+          "alpha": 0.0,
+          "continue_mass": 5.5637095625060695e-11,
+          "final_mass": 6.219613799679502e-12,
+          "repetition": 0.0,
+          "token": " for"
+        },
+        {
+          "step": 27,
+          "alpha": 0.0,
+          "continue_mass": 1.0366863617550237e-12,
+          "final_mass": 7.860028817044395e-13,
+          "repetition": 0.0,
+          "token": " each"
+        },
+        {
+          "step": 28,
+          "alpha": 0.0,
+          "continue_mass": 1.8712596749903554e-10,
+          "final_mass": 4.515615659173022e-11,
+          "repetition": 0.0,
+          "token": " of"
+        },
+        {
+          "step": 29,
+          "alpha": 0.0,
+          "continue_mass": 3.2725964160817966e-09,
+          "final_mass": 2.45935716236545e-10,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 30,
+          "alpha": 0.0,
+          "continue_mass": 2.147084864501797e-14,
+          "final_mass": 3.782490847501017e-15,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 31,
+          "alpha": 0.0,
+          "continue_mass": 8.230082129581477e-15,
+          "final_mass": 6.5578947784631e-16,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 32,
+          "alpha": 0.0,
+          "continue_mass": 2.3255922469885004e-13,
+          "final_mass": 1.330815123899709e-12,
+          "repetition": 0.0,
+          "token": " rounds"
+        },
+        {
+          "step": 33,
+          "alpha": 0.0,
+          "continue_mass": 2.592179075555645e-12,
+          "final_mass": 1.5329589811083344e-12,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 34,
+          "alpha": 0.0,
+          "continue_mass": 1.501563803851802e-11,
+          "final_mass": 2.946444086979194e-12,
+          "repetition": 0.0,
+          "token": " she"
+        },
+        {
+          "step": 35,
+          "alpha": 0.0,
+          "continue_mass": 8.879942788031503e-12,
+          "final_mass": 1.0647541875963284e-11,
+          "repetition": 0.0,
+          "token": " gets"
+        },
+        {
+          "step": 36,
+          "alpha": 0.0,
+          "continue_mass": 4.6408748372028796e-11,
+          "final_mass": 1.1782054498699068e-10,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 37,
+          "alpha": 0.0,
+          "continue_mass": 5.821787889552683e-15,
+          "final_mass": 4.051346389442878e-14,
+          "repetition": 0.0,
+          "token": "2"
+        },
+        {
+          "step": 38,
+          "alpha": 0.0,
+          "continue_mass": 7.244791382478646e-15,
+          "final_mass": 7.306710337955883e-15,
+          "repetition": 0.0,
+          "token": "2"
+        },
+        {
+          "step": 39,
+          "alpha": 0.0,
+          "continue_mass": 6.780519288401843e-12,
+          "final_mass": 1.528647521065185e-11,
+          "repetition": 0.0,
+          "token": " more"
+        },
+        {
+          "step": 40,
+          "alpha": 0.0,
+          "continue_mass": 2.6471075331713223e-10,
+          "final_mass": 6.26635243694551e-10,
+          "repetition": 0.0,
+          "token": " tokens"
+        },
+        {
+          "step": 41,
+          "alpha": 0.0,
+          "continue_mass": 2.4296062384188133e-10,
+          "final_mass": 2.5346238441414926e-09,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 42,
+          "alpha": 0.0,
+          "continue_mass": 0.057132672518491745,
+          "final_mass": 0.8098173141479492,
+          "repetition": 0.0,
+          "token": " So"
+        },
+        {
+          "step": 43,
+          "alpha": 0.0,
+          "continue_mass": 1.928709025378339e-06,
+          "final_mass": 1.1312542916308566e-11,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 44,
+          "alpha": 0.0,
+          "continue_mass": 1.911810613819398e-06,
+          "final_mass": 3.232165576849688e-11,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 45,
+          "alpha": 0.0,
+          "continue_mass": 2.362721997217765e-11,
+          "final_mass": 5.856236719517516e-14,
+          "repetition": 0.0,
+          "token": " need"
+        },
+        {
+          "step": 46,
+          "alpha": 0.0,
+          "continue_mass": 1.3394141698541695e-11,
+          "final_mass": 2.1589734271967203e-16,
+          "repetition": 0.0,
+          "token": " to"
+        },
+        {
+          "step": 47,
+          "alpha": 0.0,
+          "continue_mass": 2.5680861881482997e-07,
+          "final_mass": 1.1593119042876965e-13,
+          "repetition": 0.0,
+          "token": " find"
+        },
+        {
+          "step": 48,
+          "alpha": 0.0,
+          "continue_mass": 3.748813204307311e-10,
+          "final_mass": 1.0634568448292595e-13,
+          "repetition": 0.0,
+          "token": " out"
+        },
+        {
+          "step": 49,
+          "alpha": 0.0,
+          "continue_mass": 1.0474864309273357e-09,
+          "final_mass": 8.476964789838615e-12,
+          "repetition": 0.0,
+          "token": " how"
+        },
+        {
+          "step": 50,
+          "alpha": 0.0,
+          "continue_mass": 2.327255228806724e-11,
+          "final_mass": 6.159718460123365e-13,
+          "repetition": 0.0,
+          "token": " many"
+        },
+        {
+          "step": 51,
+          "alpha": 0.0,
+          "continue_mass": 2.993474218504488e-11,
+          "final_mass": 6.191212126305246e-11,
+          "repetition": 0.0,
+          "token": " tokens"
+        },
+        {
+          "step": 52,
+          "alpha": 0.0,
+          "continue_mass": 1.4956261056020548e-12,
+          "final_mass": 1.0860599919393366e-10,
+          "repetition": 0.0,
+          "token": " she"
+        },
+        {
+          "step": 53,
+          "alpha": 0.0,
+          "continue_mass": 6.8591521351635265e-12,
+          "final_mass": 8.2815168056527e-09,
+          "repetition": 0.0,
+          "token": " has"
+        },
+        {
+          "step": 54,
+          "alpha": 0.0,
+          "continue_mass": 1.458443608937099e-11,
+          "final_mass": 5.887587084529855e-10,
+          "repetition": 0.0,
+          "token": " in"
+        },
+        {
+          "step": 55,
+          "alpha": 0.0,
+          "continue_mass": 2.7080263351837372e-14,
+          "final_mass": 5.630686346867753e-13,
+          "repetition": 0.0,
+          "token": " total"
+        },
+        {
+          "step": 56,
+          "alpha": 0.0,
+          "continue_mass": 4.1329639710596666e-10,
+          "final_mass": 1.1470754346376566e-09,
+          "repetition": 0.0,
+          "token": " after"
+        },
+        {
+          "step": 57,
+          "alpha": 0.0,
+          "continue_mass": 9.508191456397697e-11,
+          "final_mass": 2.275418221897585e-11,
+          "repetition": 0.0,
+          "token": " all"
+        },
+        {
+          "step": 58,
+          "alpha": 0.0,
+          "continue_mass": 4.612631165912262e-09,
+          "final_mass": 2.8024811637994418e-11,
+          "repetition": 0.0,
+          "token": " those"
+        },
+        {
+          "step": 59,
+          "alpha": 0.0,
+          "continue_mass": 3.582436777782583e-11,
+          "final_mass": 3.169953188830732e-11,
+          "repetition": 0.0,
+          "token": " rounds"
+        },
+        {
+          "step": 60,
+          "alpha": 0.0,
+          "continue_mass": 3.206400422950395e-10,
+          "final_mass": 2.8896854353810397e-10,
+          "repetition": 0.0,
+          "token": ".\\n\\n"
+        },
+        {
+          "step": 61,
+          "alpha": 0.0,
+          "continue_mass": 1.2015195352432784e-05,
+          "final_mass": 2.9282153590770577e-08,
+          "repetition": 0.0,
+          "token": "First"
+        },
+        {
+          "step": 62,
+          "alpha": 0.0,
+          "continue_mass": 7.521542499944189e-08,
+          "final_mass": 4.160419838500351e-13,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 63,
+          "alpha": 0.0,
+          "continue_mass": 4.1138424222708636e-08,
+          "final_mass": 2.935976461948542e-11,
+          "repetition": 0.0,
+          "token": " I"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000001",
+      "question": "Mia has 15 tokens and gets 22 more tokens for each of 11 rounds. How many tokens does she have?",
+      "gold_answer": "257",
+      "controller": "static_mean_direction",
+      "layer": 18,
+      "completion": " <Step>\n < ... <\n I I we we I You ... <\n we you, < <, < we, < < | | < < | < < < ... | ... ... < < <, < < < | < < < | < < ... |, | * < < < < < <",
+      "extracted_answer": null,
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 1.0,
+      "max_alpha": 1.0,
+      "alpha_trace": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 1.0,
+          "continue_mass": 0.011040625162422657,
+          "final_mass": 6.08978807576932e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 1.0,
+          "continue_mass": 3.722916801507381e-07,
+          "final_mass": 1.198255574763607e-07,
+          "repetition": 0.0,
+          "token": "Step"
+        },
+        {
+          "step": 2,
+          "alpha": 1.0,
+          "continue_mass": 0.0024508764035999775,
+          "final_mass": 0.0003686373820528388,
+          "repetition": 0.0,
+          "token": ">\\n"
+        },
+        {
+          "step": 3,
+          "alpha": 1.0,
+          "continue_mass": 3.714206059157732e-06,
+          "final_mass": 0.00010356798156863078,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 4,
+          "alpha": 1.0,
+          "continue_mass": 0.0018089608056470752,
+          "final_mass": 8.725241787033156e-05,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 5,
+          "alpha": 1.0,
+          "continue_mass": 4.490216088015586e-05,
+          "final_mass": 0.00011463832925073802,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 6,
+          "alpha": 1.0,
+          "continue_mass": 2.6895418159256224e-06,
+          "final_mass": 1.229217190257259e-07,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 7,
+          "alpha": 1.0,
+          "continue_mass": 7.881215424276888e-05,
+          "final_mass": 0.001970123965293169,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 8,
+          "alpha": 1.0,
+          "continue_mass": 0.003813433460891247,
+          "final_mass": 0.0011623684549704194,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 9,
+          "alpha": 1.0,
+          "continue_mass": 5.099803820485249e-05,
+          "final_mass": 0.00018441100837662816,
+          "repetition": 0.0,
+          "token": " we"
+        },
+        {
+          "step": 10,
+          "alpha": 1.0,
+          "continue_mass": 0.0010702479630708694,
+          "final_mass": 0.001931901671923697,
+          "repetition": 0.0,
+          "token": " we"
+        },
+        {
+          "step": 11,
+          "alpha": 1.0,
+          "continue_mass": 0.00017761797062121332,
+          "final_mass": 1.2825500562030356e-05,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 12,
+          "alpha": 1.0,
+          "continue_mass": 3.3367861760780215e-05,
+          "final_mass": 2.426939317956567e-06,
+          "repetition": 0.0,
+          "token": " You"
+        },
+        {
+          "step": 13,
+          "alpha": 1.0,
+          "continue_mass": 1.9603237888077274e-05,
+          "final_mass": 2.2242413251660764e-05,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 14,
+          "alpha": 1.0,
+          "continue_mass": 0.06467797607183456,
+          "final_mass": 0.01949443481862545,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 15,
+          "alpha": 1.0,
+          "continue_mass": 3.45453190675471e-05,
+          "final_mass": 1.4617783108406002e-06,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 16,
+          "alpha": 1.0,
+          "continue_mass": 2.7909840355277993e-05,
+          "final_mass": 1.2995649740332738e-05,
+          "repetition": 0.0,
+          "token": " we"
+        },
+        {
+          "step": 17,
+          "alpha": 1.0,
+          "continue_mass": 0.00010948201816063374,
+          "final_mass": 2.1858795662410557e-05,
+          "repetition": 0.0,
+          "token": " you"
+        },
+        {
+          "step": 18,
+          "alpha": 1.0,
+          "continue_mass": 1.67784071436472e-06,
+          "final_mass": 2.8065995749670947e-08,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 19,
+          "alpha": 1.0,
+          "continue_mass": 0.0003153793222736567,
+          "final_mass": 0.00011585062748054042,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 20,
+          "alpha": 1.0,
+          "continue_mass": 0.00014207586355041713,
+          "final_mass": 3.5598013710114174e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 21,
+          "alpha": 1.0,
+          "continue_mass": 3.168919283780269e-05,
+          "final_mass": 1.848603005782934e-06,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 22,
+          "alpha": 1.0,
+          "continue_mass": 0.00020446265989448875,
+          "final_mass": 0.00039645054494030774,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 23,
+          "alpha": 1.0,
+          "continue_mass": 0.00020301250333432108,
+          "final_mass": 1.6722684449632652e-05,
+          "repetition": 0.0,
+          "token": " we"
+        },
+        {
+          "step": 24,
+          "alpha": 1.0,
+          "continue_mass": 7.653733518964145e-06,
+          "final_mass": 1.3939940799900796e-05,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 25,
+          "alpha": 1.0,
+          "continue_mass": 0.00026279815938323736,
+          "final_mass": 0.00023818097542971373,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 26,
+          "alpha": 1.0,
+          "continue_mass": 0.00012156173033872619,
+          "final_mass": 0.0007370381499640644,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 27,
+          "alpha": 1.0,
+          "continue_mass": 4.791398532688618e-05,
+          "final_mass": 8.212897955672815e-05,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 28,
+          "alpha": 1.0,
+          "continue_mass": 4.782761607202701e-05,
+          "final_mass": 8.223790246120188e-06,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 29,
+          "alpha": 1.0,
+          "continue_mass": 8.051237091422081e-05,
+          "final_mass": 4.559814988169819e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 30,
+          "alpha": 1.0,
+          "continue_mass": 0.0016439106548205018,
+          "final_mass": 0.001911407569423318,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 31,
+          "alpha": 1.0,
+          "continue_mass": 0.00017429109720978886,
+          "final_mass": 0.0011868347646668553,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 32,
+          "alpha": 1.0,
+          "continue_mass": 0.00011261859617661685,
+          "final_mass": 0.00012836276437155902,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 33,
+          "alpha": 1.0,
+          "continue_mass": 0.002102792728692293,
+          "final_mass": 0.0010794574627652764,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 34,
+          "alpha": 1.0,
+          "continue_mass": 0.0003575423324946314,
+          "final_mass": 0.0003374965745024383,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 35,
+          "alpha": 1.0,
+          "continue_mass": 0.0003344806609675288,
+          "final_mass": 0.00011351392458891496,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 36,
+          "alpha": 1.0,
+          "continue_mass": 0.001833363901823759,
+          "final_mass": 0.0002902499109040946,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 37,
+          "alpha": 1.0,
+          "continue_mass": 0.0003944764903280884,
+          "final_mass": 7.297459524124861e-05,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 38,
+          "alpha": 1.0,
+          "continue_mass": 0.00047630834160372615,
+          "final_mass": 0.00011625820479821414,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 39,
+          "alpha": 1.0,
+          "continue_mass": 0.002993445610627532,
+          "final_mass": 0.00017112326167989522,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 40,
+          "alpha": 1.0,
+          "continue_mass": 0.0015022256411612034,
+          "final_mass": 0.0002220503956777975,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 41,
+          "alpha": 1.0,
+          "continue_mass": 0.004077255725860596,
+          "final_mass": 0.0002503850555513054,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 42,
+          "alpha": 1.0,
+          "continue_mass": 7.844468927942216e-05,
+          "final_mass": 4.519220601650886e-05,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 43,
+          "alpha": 1.0,
+          "continue_mass": 0.00843693409115076,
+          "final_mass": 0.002092468785122037,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 44,
+          "alpha": 1.0,
+          "continue_mass": 0.0005251356633380055,
+          "final_mass": 0.000985778053291142,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 45,
+          "alpha": 1.0,
+          "continue_mass": 0.0005059917457401752,
+          "final_mass": 8.618515130365267e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 46,
+          "alpha": 1.0,
+          "continue_mass": 0.0006592491990886629,
+          "final_mass": 0.0008882326656021178,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 47,
+          "alpha": 1.0,
+          "continue_mass": 0.00021519730216823518,
+          "final_mass": 2.2502570573124103e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 48,
+          "alpha": 1.0,
+          "continue_mass": 0.003685584058985114,
+          "final_mass": 0.015686949715018272,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 49,
+          "alpha": 1.0,
+          "continue_mass": 0.0012385719455778599,
+          "final_mass": 0.0014564319280907512,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 50,
+          "alpha": 1.0,
+          "continue_mass": 0.0009145426447503269,
+          "final_mass": 0.0014389505377039313,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 51,
+          "alpha": 1.0,
+          "continue_mass": 0.0019182709511369467,
+          "final_mass": 0.0006771297776140273,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 52,
+          "alpha": 1.0,
+          "continue_mass": 0.0006743361591361463,
+          "final_mass": 0.0008690959657542408,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 53,
+          "alpha": 1.0,
+          "continue_mass": 0.0006317099323496222,
+          "final_mass": 0.00015332424663938582,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 54,
+          "alpha": 1.0,
+          "continue_mass": 0.0028457401785999537,
+          "final_mass": 0.0011326322564855218,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 55,
+          "alpha": 1.0,
+          "continue_mass": 0.0016324856551364064,
+          "final_mass": 0.0019445824436843395,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 56,
+          "alpha": 1.0,
+          "continue_mass": 0.0014346522511914372,
+          "final_mass": 0.0005676419823430479,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 57,
+          "alpha": 1.0,
+          "continue_mass": 0.0013571063755080104,
+          "final_mass": 0.001275386312045157,
+          "repetition": 0.0,
+          "token": " *"
+        },
+        {
+          "step": 58,
+          "alpha": 1.0,
+          "continue_mass": 0.00011196262494195253,
+          "final_mass": 5.859637167304754e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 59,
+          "alpha": 1.0,
+          "continue_mass": 0.001631497172638774,
+          "final_mass": 0.0042451536282896996,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 60,
+          "alpha": 1.0,
+          "continue_mass": 0.0023976797237992287,
+          "final_mass": 0.001058395253494382,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 61,
+          "alpha": 1.0,
+          "continue_mass": 0.003651723964139819,
+          "final_mass": 0.0015424354933202267,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 62,
+          "alpha": 1.0,
+          "continue_mass": 0.008699856698513031,
+          "final_mass": 0.0017838447820395231,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 63,
+          "alpha": 1.0,
+          "continue_mass": 0.0038484062533825636,
+          "final_mass": 0.0024230594281107187,
+          "repetition": 0.0,
+          "token": " <"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000001",
+      "question": "Mia has 15 tokens and gets 22 more tokens for each of 11 rounds. How many tokens does she have?",
+      "gold_answer": "257",
+      "controller": "closed_loop_cet",
+      "layer": 18,
+      "completion": " <Step>\n < ... Mia as we ( < < is Here <1\n::Reason: < and <> < < ( is < < < <number reasoning <number:: < < < < |:| < < < < < < < < < < < < ( < < < the < <",
+      "extracted_answer": null,
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 0.2578125,
+      "max_alpha": 1.0,
+      "alpha_trace": [
+        0.5,
+        0.5,
+        0.5,
+        1.0,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        1.0,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        0.5,
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.25,
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 0.5,
+          "continue_mass": 0.011040625162422657,
+          "final_mass": 6.08978807576932e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 0.5,
+          "continue_mass": 3.722916801507381e-07,
+          "final_mass": 1.198255574763607e-07,
+          "repetition": 0.0,
+          "token": "Step"
+        },
+        {
+          "step": 2,
+          "alpha": 0.5,
+          "continue_mass": 0.0016046775272116065,
+          "final_mass": 0.0013648838503286242,
+          "repetition": 0.0,
+          "token": ">\\n"
+        },
+        {
+          "step": 3,
+          "alpha": 1.0,
+          "continue_mass": 2.9698944672418293e-06,
+          "final_mass": 0.00010296379332430661,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 4,
+          "alpha": 0.5,
+          "continue_mass": 0.00039874864160083234,
+          "final_mass": 5.809934009448625e-05,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 5,
+          "alpha": 1.0,
+          "continue_mass": 3.48605535691604e-05,
+          "final_mass": 9.352679626317695e-05,
+          "repetition": 0.0,
+          "token": " Mia"
+        },
+        {
+          "step": 6,
+          "alpha": 1.0,
+          "continue_mass": 0.0007295025861822069,
+          "final_mass": 0.003081332193687558,
+          "repetition": 0.0,
+          "token": " as"
+        },
+        {
+          "step": 7,
+          "alpha": 1.0,
+          "continue_mass": 8.349051495315507e-05,
+          "final_mass": 0.00010794482659548521,
+          "repetition": 0.0,
+          "token": " we"
+        },
+        {
+          "step": 8,
+          "alpha": 0.5,
+          "continue_mass": 0.00022529570560436696,
+          "final_mass": 0.00016169897571671754,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 9,
+          "alpha": 1.0,
+          "continue_mass": 0.00011105256271548569,
+          "final_mass": 0.0004398365563247353,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 10,
+          "alpha": 0.5,
+          "continue_mass": 0.00021143424964975566,
+          "final_mass": 4.931418880005367e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 11,
+          "alpha": 1.0,
+          "continue_mass": 0.00035314320120960474,
+          "final_mass": 0.0005922337877564132,
+          "repetition": 0.0,
+          "token": " is"
+        },
+        {
+          "step": 12,
+          "alpha": 1.0,
+          "continue_mass": 1.6388055882998742e-05,
+          "final_mass": 5.0634371291380376e-05,
+          "repetition": 0.0,
+          "token": " Here"
+        },
+        {
+          "step": 13,
+          "alpha": 1.0,
+          "continue_mass": 3.888678111252375e-05,
+          "final_mass": 0.00015840423293411732,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 14,
+          "alpha": 0.5,
+          "continue_mass": 0.0025719504337757826,
+          "final_mass": 0.0012019076384603977,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 15,
+          "alpha": 0.5,
+          "continue_mass": 2.2859403543407097e-06,
+          "final_mass": 2.9594357897622103e-07,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 16,
+          "alpha": 0.25,
+          "continue_mass": 1.850757143984083e-05,
+          "final_mass": 1.7519225366413593e-05,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 17,
+          "alpha": 0.0,
+          "continue_mass": 2.9465771149261855e-05,
+          "final_mass": 9.828191832639277e-05,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 18,
+          "alpha": 0.25,
+          "continue_mass": 1.2489933396864217e-05,
+          "final_mass": 1.20970771604334e-05,
+          "repetition": 0.0,
+          "token": "Reason"
+        },
+        {
+          "step": 19,
+          "alpha": 0.0,
+          "continue_mass": 9.372375302518776e-07,
+          "final_mass": 2.8177139483887004e-06,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 20,
+          "alpha": 0.25,
+          "continue_mass": 4.3436000851215795e-05,
+          "final_mass": 4.490239916776773e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 21,
+          "alpha": 0.25,
+          "continue_mass": 5.909843366680434e-06,
+          "final_mass": 1.090293835659395e-06,
+          "repetition": 0.0,
+          "token": " and"
+        },
+        {
+          "step": 22,
+          "alpha": 0.25,
+          "continue_mass": 5.153311576577835e-05,
+          "final_mass": 3.4303664051549276e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 23,
+          "alpha": 0.0,
+          "continue_mass": 1.401596273353789e-05,
+          "final_mass": 0.00012009673082502559,
+          "repetition": 0.0,
+          "token": ">"
+        },
+        {
+          "step": 24,
+          "alpha": 0.25,
+          "continue_mass": 0.00012712804891634732,
+          "final_mass": 0.00011393569002393633,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 25,
+          "alpha": 0.0,
+          "continue_mass": 3.6100514080317225e-06,
+          "final_mass": 1.2361783774395008e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 26,
+          "alpha": 0.0,
+          "continue_mass": 1.8113580154022202e-05,
+          "final_mass": 8.763492223806679e-05,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 27,
+          "alpha": 0.0,
+          "continue_mass": 8.38269988889806e-05,
+          "final_mass": 0.00010356309212511405,
+          "repetition": 0.0,
+          "token": " is"
+        },
+        {
+          "step": 28,
+          "alpha": 0.0,
+          "continue_mass": 0.00031459354795515537,
+          "final_mass": 0.006310643628239632,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 29,
+          "alpha": 0.25,
+          "continue_mass": 0.00016222060366999358,
+          "final_mass": 0.00012688161223195493,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 30,
+          "alpha": 0.0,
+          "continue_mass": 0.0001572200417285785,
+          "final_mass": 0.00016113434685394168,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 31,
+          "alpha": 0.25,
+          "continue_mass": 9.974699059966952e-05,
+          "final_mass": 6.396760727511719e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 32,
+          "alpha": 0.0,
+          "continue_mass": 9.091379615711048e-05,
+          "final_mass": 0.00010313557140761986,
+          "repetition": 0.0,
+          "token": "number"
+        },
+        {
+          "step": 33,
+          "alpha": 0.25,
+          "continue_mass": 0.0015812094788998365,
+          "final_mass": 0.0014874315820634365,
+          "repetition": 0.0,
+          "token": " reasoning"
+        },
+        {
+          "step": 34,
+          "alpha": 0.0,
+          "continue_mass": 0.0001477438781876117,
+          "final_mass": 0.00019497243920341134,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 35,
+          "alpha": 0.0,
+          "continue_mass": 4.263811570126563e-05,
+          "final_mass": 0.0005933025386184454,
+          "repetition": 0.0,
+          "token": "number"
+        },
+        {
+          "step": 36,
+          "alpha": 0.0,
+          "continue_mass": 0.00017976167146116495,
+          "final_mass": 0.0002147662453353405,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 37,
+          "alpha": 0.0,
+          "continue_mass": 0.00023101954138837755,
+          "final_mass": 0.0008922706474550068,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 38,
+          "alpha": 0.25,
+          "continue_mass": 0.0005328822880983353,
+          "final_mass": 0.0005198706639930606,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 39,
+          "alpha": 0.0,
+          "continue_mass": 0.00027467141626402736,
+          "final_mass": 0.0004171344917267561,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 40,
+          "alpha": 0.0,
+          "continue_mass": 6.970098183955997e-05,
+          "final_mass": 0.0008273649145849049,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 41,
+          "alpha": 0.0,
+          "continue_mass": 0.00013809317897539586,
+          "final_mass": 0.0035798491444438696,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 42,
+          "alpha": 0.0,
+          "continue_mass": 0.00034024222986772656,
+          "final_mass": 0.0026774608995765448,
+          "repetition": 0.0,
+          "token": " |"
+        },
+        {
+          "step": 43,
+          "alpha": 0.0,
+          "continue_mass": 4.483291195356287e-05,
+          "final_mass": 9.366618905914947e-05,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 44,
+          "alpha": 0.0,
+          "continue_mass": 0.00010519294301047921,
+          "final_mass": 0.0003312464104965329,
+          "repetition": 0.0,
+          "token": "|"
+        },
+        {
+          "step": 45,
+          "alpha": 0.0,
+          "continue_mass": 0.0004070675349794328,
+          "final_mass": 0.0009333011112175882,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 46,
+          "alpha": 0.0,
+          "continue_mass": 0.00026181316934525967,
+          "final_mass": 0.00037611392326653004,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 47,
+          "alpha": 0.25,
+          "continue_mass": 0.0003234005125705153,
+          "final_mass": 0.00027365973801352084,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 48,
+          "alpha": 0.25,
+          "continue_mass": 0.0003940318420063704,
+          "final_mass": 0.00016347828204743564,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 49,
+          "alpha": 0.0,
+          "continue_mass": 0.00025200616801157594,
+          "final_mass": 0.0002585260081104934,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 50,
+          "alpha": 0.0,
+          "continue_mass": 7.833036943338811e-05,
+          "final_mass": 0.00021801900584250689,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 51,
+          "alpha": 0.25,
+          "continue_mass": 0.00070353684714064,
+          "final_mass": 0.0006272901082411408,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 52,
+          "alpha": 0.25,
+          "continue_mass": 0.0004626743320841342,
+          "final_mass": 0.00021430889319162816,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 53,
+          "alpha": 0.25,
+          "continue_mass": 0.0005551845533773303,
+          "final_mass": 0.00023538139066658914,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 54,
+          "alpha": 0.25,
+          "continue_mass": 0.0002850298769772053,
+          "final_mass": 0.00026500364765524864,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 55,
+          "alpha": 0.0,
+          "continue_mass": 0.0003172877768520266,
+          "final_mass": 0.000563782115932554,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 56,
+          "alpha": 0.0,
+          "continue_mass": 0.0002744788653217256,
+          "final_mass": 0.00034571922151371837,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 57,
+          "alpha": 0.25,
+          "continue_mass": 0.0007061023497954011,
+          "final_mass": 0.0003402708098292351,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 58,
+          "alpha": 0.0,
+          "continue_mass": 0.00042072590440511703,
+          "final_mass": 0.0005022636032663286,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 59,
+          "alpha": 0.0,
+          "continue_mass": 0.0010275553213432431,
+          "final_mass": 0.0030548078939318657,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 60,
+          "alpha": 0.0,
+          "continue_mass": 0.0010268830228596926,
+          "final_mass": 0.0031203576363623142,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 61,
+          "alpha": 0.0,
+          "continue_mass": 0.001753058168105781,
+          "final_mass": 0.0035612431820482016,
+          "repetition": 0.0,
+          "token": " the"
+        },
+        {
+          "step": 62,
+          "alpha": 0.0,
+          "continue_mass": 0.0005633236723951995,
+          "final_mass": 0.0006681124214082956,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 63,
+          "alpha": 0.25,
+          "continue_mass": 0.004506333731114864,
+          "final_mass": 0.0017222344176843762,
+          "repetition": 0.0,
+          "token": " <"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000002",
+      "question": "A box has 18 rows with 20 items in each row, then 5 items are removed. How many remain?",
+      "gold_answer": "355",
+      "controller": "baseline",
+      "layer": 18,
+      "completion": " <brief reasoning>\nFinal answer: <number>\n\nOkay, let's see. The problem says there's a box with 18 rows, and each row has 20 items. So first, I need to figure out how many items are there initially. That would be 18 multiplied by 20",
+      "extracted_answer": "20",
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 0.0,
+      "max_alpha": 0.0,
+      "alpha_trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 0.0,
+          "continue_mass": 0.05292155221104622,
+          "final_mass": 7.080449722707272e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 0.0,
+          "continue_mass": 8.989699153971742e-07,
+          "final_mass": 3.756007060928823e-07,
+          "repetition": 0.0,
+          "token": "brief"
+        },
+        {
+          "step": 2,
+          "alpha": 0.0,
+          "continue_mass": 1.8313539573711068e-09,
+          "final_mass": 1.8537088308789862e-08,
+          "repetition": 0.0,
+          "token": " reasoning"
+        },
+        {
+          "step": 3,
+          "alpha": 0.0,
+          "continue_mass": 3.6258779090303506e-08,
+          "final_mass": 2.105124607965081e-08,
+          "repetition": 0.0,
+          "token": ">\\n"
+        },
+        {
+          "step": 4,
+          "alpha": 0.0,
+          "continue_mass": 6.08543704316844e-09,
+          "final_mass": 3.118511813227087e-05,
+          "repetition": 0.0,
+          "token": "Final"
+        },
+        {
+          "step": 5,
+          "alpha": 0.0,
+          "continue_mass": 3.158454331408933e-10,
+          "final_mass": 0.01969977281987667,
+          "repetition": 0.0,
+          "token": " answer"
+        },
+        {
+          "step": 6,
+          "alpha": 0.0,
+          "continue_mass": 2.2528200138705046e-10,
+          "final_mass": 3.8299680094056043e-10,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 7,
+          "alpha": 0.0,
+          "continue_mass": 9.576973752700724e-06,
+          "final_mass": 2.679191538845771e-06,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 8,
+          "alpha": 0.0,
+          "continue_mass": 1.0932025285015357e-09,
+          "final_mass": 2.7807407931845773e-08,
+          "repetition": 0.0,
+          "token": "number"
+        },
+        {
+          "step": 9,
+          "alpha": 0.0,
+          "continue_mass": 2.818653221936529e-08,
+          "final_mass": 1.4127154202014935e-07,
+          "repetition": 0.0,
+          "token": ">\\n\\n"
+        },
+        {
+          "step": 10,
+          "alpha": 0.0,
+          "continue_mass": 5.823337687616004e-07,
+          "final_mass": 9.190958962790319e-07,
+          "repetition": 0.0,
+          "token": "Okay"
+        },
+        {
+          "step": 11,
+          "alpha": 0.0,
+          "continue_mass": 9.911151011010588e-08,
+          "final_mass": 7.452224792814377e-08,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 12,
+          "alpha": 0.0,
+          "continue_mass": 6.127495453256415e-06,
+          "final_mass": 4.509751079240232e-07,
+          "repetition": 0.0,
+          "token": " let"
+        },
+        {
+          "step": 13,
+          "alpha": 0.0,
+          "continue_mass": 6.468637847589775e-10,
+          "final_mass": 1.8179848251809183e-11,
+          "repetition": 0.0,
+          "token": "'s"
+        },
+        {
+          "step": 14,
+          "alpha": 0.0,
+          "continue_mass": 4.0866887651702655e-10,
+          "final_mass": 2.9192115391651896e-10,
+          "repetition": 0.0,
+          "token": " see"
+        },
+        {
+          "step": 15,
+          "alpha": 0.0,
+          "continue_mass": 3.1487512597294653e-10,
+          "final_mass": 3.775727300259213e-11,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 16,
+          "alpha": 0.0,
+          "continue_mass": 0.9032167196273804,
+          "final_mass": 0.03640285134315491,
+          "repetition": 0.0,
+          "token": " The"
+        },
+        {
+          "step": 17,
+          "alpha": 0.0,
+          "continue_mass": 1.975701026390997e-11,
+          "final_mass": 1.1945021794607102e-12,
+          "repetition": 0.0,
+          "token": " problem"
+        },
+        {
+          "step": 18,
+          "alpha": 0.0,
+          "continue_mass": 9.50513214144355e-13,
+          "final_mass": 2.301464140791465e-13,
+          "repetition": 0.0,
+          "token": " says"
+        },
+        {
+          "step": 19,
+          "alpha": 0.0,
+          "continue_mass": 3.9996048140089613e-10,
+          "final_mass": 1.0766748820625893e-12,
+          "repetition": 0.0,
+          "token": " there"
+        },
+        {
+          "step": 20,
+          "alpha": 0.0,
+          "continue_mass": 1.4766897557180747e-12,
+          "final_mass": 1.0037057727717313e-15,
+          "repetition": 0.0,
+          "token": "'s"
+        },
+        {
+          "step": 21,
+          "alpha": 0.0,
+          "continue_mass": 3.848076371437692e-12,
+          "final_mass": 3.3519999384674926e-13,
+          "repetition": 0.0,
+          "token": " a"
+        },
+        {
+          "step": 22,
+          "alpha": 0.0,
+          "continue_mass": 6.758456099452415e-13,
+          "final_mass": 2.7089859218690227e-13,
+          "repetition": 0.0,
+          "token": " box"
+        },
+        {
+          "step": 23,
+          "alpha": 0.0,
+          "continue_mass": 5.527169867625137e-12,
+          "final_mass": 4.931999429626417e-14,
+          "repetition": 0.0,
+          "token": " with"
+        },
+        {
+          "step": 24,
+          "alpha": 0.0,
+          "continue_mass": 5.8273459842272946e-12,
+          "final_mass": 2.7558814605366244e-12,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 25,
+          "alpha": 0.0,
+          "continue_mass": 4.038817840416745e-15,
+          "final_mass": 1.855249488107516e-15,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 26,
+          "alpha": 0.0,
+          "continue_mass": 1.9969024077668785e-16,
+          "final_mass": 3.496380283570586e-17,
+          "repetition": 0.0,
+          "token": "8"
+        },
+        {
+          "step": 27,
+          "alpha": 0.0,
+          "continue_mass": 2.5706509742596563e-15,
+          "final_mass": 2.8680541946777714e-15,
+          "repetition": 0.0,
+          "token": " rows"
+        },
+        {
+          "step": 28,
+          "alpha": 0.0,
+          "continue_mass": 2.4788047049001394e-12,
+          "final_mass": 6.616493377492594e-13,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 29,
+          "alpha": 0.0,
+          "continue_mass": 4.18341414027551e-13,
+          "final_mass": 2.907602815200444e-13,
+          "repetition": 0.0,
+          "token": " and"
+        },
+        {
+          "step": 30,
+          "alpha": 0.0,
+          "continue_mass": 1.6497689173979035e-13,
+          "final_mass": 7.198936406846088e-14,
+          "repetition": 0.0,
+          "token": " each"
+        },
+        {
+          "step": 31,
+          "alpha": 0.0,
+          "continue_mass": 1.6660423854310963e-13,
+          "final_mass": 2.0767835015719424e-14,
+          "repetition": 0.0,
+          "token": " row"
+        },
+        {
+          "step": 32,
+          "alpha": 0.0,
+          "continue_mass": 1.8962880311140795e-13,
+          "final_mass": 3.309748376517825e-14,
+          "repetition": 0.0,
+          "token": " has"
+        },
+        {
+          "step": 33,
+          "alpha": 0.0,
+          "continue_mass": 3.2514444695680433e-12,
+          "final_mass": 4.856637553056486e-13,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 34,
+          "alpha": 0.0,
+          "continue_mass": 2.5799458903063514e-16,
+          "final_mass": 4.498239934798887e-16,
+          "repetition": 0.0,
+          "token": "2"
+        },
+        {
+          "step": 35,
+          "alpha": 0.0,
+          "continue_mass": 2.389007193940695e-16,
+          "final_mass": 5.584571601053347e-17,
+          "repetition": 0.0,
+          "token": "0"
+        },
+        {
+          "step": 36,
+          "alpha": 0.0,
+          "continue_mass": 5.562243018470336e-15,
+          "final_mass": 4.016033924685025e-15,
+          "repetition": 0.0,
+          "token": " items"
+        },
+        {
+          "step": 37,
+          "alpha": 0.0,
+          "continue_mass": 2.914227669945091e-12,
+          "final_mass": 3.400837987957428e-12,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 38,
+          "alpha": 0.0,
+          "continue_mass": 0.0055576809681952,
+          "final_mass": 0.7986758351325989,
+          "repetition": 0.0,
+          "token": " So"
+        },
+        {
+          "step": 39,
+          "alpha": 0.0,
+          "continue_mass": 7.893777365097776e-06,
+          "final_mass": 8.691341374898742e-13,
+          "repetition": 0.0,
+          "token": " first"
+        },
+        {
+          "step": 40,
+          "alpha": 0.0,
+          "continue_mass": 2.3724899822497036e-09,
+          "final_mass": 3.085004446996484e-14,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 41,
+          "alpha": 0.0,
+          "continue_mass": 1.7839169030864355e-09,
+          "final_mass": 2.130726964224422e-13,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 42,
+          "alpha": 0.0,
+          "continue_mass": 1.4799975134316412e-10,
+          "final_mass": 1.208104796757148e-13,
+          "repetition": 0.0,
+          "token": " need"
+        },
+        {
+          "step": 43,
+          "alpha": 0.0,
+          "continue_mass": 1.4878390186545687e-11,
+          "final_mass": 5.999914868483984e-17,
+          "repetition": 0.0,
+          "token": " to"
+        },
+        {
+          "step": 44,
+          "alpha": 0.0,
+          "continue_mass": 4.6268814912764356e-07,
+          "final_mass": 3.992208920757835e-14,
+          "repetition": 0.0,
+          "token": " figure"
+        },
+        {
+          "step": 45,
+          "alpha": 0.0,
+          "continue_mass": 2.8936843698111614e-13,
+          "final_mass": 2.5504966061382385e-17,
+          "repetition": 0.0,
+          "token": " out"
+        },
+        {
+          "step": 46,
+          "alpha": 0.0,
+          "continue_mass": 1.4729029107485303e-10,
+          "final_mass": 4.1651340850715896e-14,
+          "repetition": 0.0,
+          "token": " how"
+        },
+        {
+          "step": 47,
+          "alpha": 0.0,
+          "continue_mass": 9.117858378038246e-13,
+          "final_mass": 2.8366049201374033e-15,
+          "repetition": 0.0,
+          "token": " many"
+        },
+        {
+          "step": 48,
+          "alpha": 0.0,
+          "continue_mass": 1.596396452530069e-11,
+          "final_mass": 6.955988736401242e-12,
+          "repetition": 0.0,
+          "token": " items"
+        },
+        {
+          "step": 49,
+          "alpha": 0.0,
+          "continue_mass": 6.908746907896557e-09,
+          "final_mass": 4.678691895715348e-12,
+          "repetition": 0.0,
+          "token": " are"
+        },
+        {
+          "step": 50,
+          "alpha": 0.0,
+          "continue_mass": 4.6868654790532815e-11,
+          "final_mass": 1.7649718492274147e-12,
+          "repetition": 0.0,
+          "token": " there"
+        },
+        {
+          "step": 51,
+          "alpha": 0.0,
+          "continue_mass": 3.4155664963009258e-09,
+          "final_mass": 2.1265510186108116e-11,
+          "repetition": 0.0,
+          "token": " initially"
+        },
+        {
+          "step": 52,
+          "alpha": 0.0,
+          "continue_mass": 1.3957432987155016e-09,
+          "final_mass": 1.1212157591256044e-10,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 53,
+          "alpha": 0.0,
+          "continue_mass": 0.1897641271352768,
+          "final_mass": 0.00020372070139274,
+          "repetition": 0.0,
+          "token": " That"
+        },
+        {
+          "step": 54,
+          "alpha": 0.0,
+          "continue_mass": 2.8319140435439927e-11,
+          "final_mass": 1.5036475753751888e-12,
+          "repetition": 0.0,
+          "token": " would"
+        },
+        {
+          "step": 55,
+          "alpha": 0.0,
+          "continue_mass": 1.1685059170263301e-11,
+          "final_mass": 8.935116779492172e-14,
+          "repetition": 0.0,
+          "token": " be"
+        },
+        {
+          "step": 56,
+          "alpha": 0.0,
+          "continue_mass": 6.695531240552555e-09,
+          "final_mass": 3.761184419470709e-11,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 57,
+          "alpha": 0.0,
+          "continue_mass": 1.0306873410304007e-11,
+          "final_mass": 1.3659909791838287e-12,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 58,
+          "alpha": 0.0,
+          "continue_mass": 1.948164597849987e-14,
+          "final_mass": 6.283034704661448e-16,
+          "repetition": 0.0,
+          "token": "8"
+        },
+        {
+          "step": 59,
+          "alpha": 0.0,
+          "continue_mass": 2.8587339093166797e-11,
+          "final_mass": 3.305253423388499e-12,
+          "repetition": 0.0,
+          "token": " multiplied"
+        },
+        {
+          "step": 60,
+          "alpha": 0.0,
+          "continue_mass": 2.7959680909764046e-15,
+          "final_mass": 2.5503262069320526e-16,
+          "repetition": 0.0,
+          "token": " by"
+        },
+        {
+          "step": 61,
+          "alpha": 0.0,
+          "continue_mass": 7.2240043808013965e-12,
+          "final_mass": 1.603907978653396e-13,
+          "repetition": 0.0,
+          "token": " "
+        },
+        {
+          "step": 62,
+          "alpha": 0.0,
+          "continue_mass": 9.62732777409791e-16,
+          "final_mass": 3.090560114921701e-16,
+          "repetition": 0.0,
+          "token": "2"
+        },
+        {
+          "step": 63,
+          "alpha": 0.0,
+          "continue_mass": 1.1435170945729971e-14,
+          "final_mass": 6.623147549741611e-16,
+          "repetition": 0.0,
+          "token": "0"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000002",
+      "question": "A box has 18 rows with 20 items in each row, then 5 items are removed. How many remain?",
+      "gold_answer": "355",
+      "controller": "static_mean_direction",
+      "layer": 18,
+      "completion": " <1> < ... I < <1 ... I ... < we here here then previous, < ( ... < < < ( t. ( then is < < we < t ( < < < < < < < < < < < < < < < < < < < < < < < < < < <",
+      "extracted_answer": null,
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 1.0,
+      "max_alpha": 1.0,
+      "alpha_trace": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 1.0,
+          "continue_mass": 0.05292155221104622,
+          "final_mass": 7.080449722707272e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 1.0,
+          "continue_mass": 8.989699153971742e-07,
+          "final_mass": 3.756007060928823e-07,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 2,
+          "alpha": 1.0,
+          "continue_mass": 0.0006571005214937031,
+          "final_mass": 0.00031501956982538104,
+          "repetition": 0.0,
+          "token": ">"
+        },
+        {
+          "step": 3,
+          "alpha": 1.0,
+          "continue_mass": 0.00023536040680482984,
+          "final_mass": 0.002230206737294793,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 4,
+          "alpha": 1.0,
+          "continue_mass": 3.152375211357139e-05,
+          "final_mass": 7.756624108878896e-05,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 5,
+          "alpha": 1.0,
+          "continue_mass": 4.870775228482671e-06,
+          "final_mass": 2.389244400546886e-06,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 6,
+          "alpha": 1.0,
+          "continue_mass": 5.874372800462879e-05,
+          "final_mass": 0.0010217602830380201,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 7,
+          "alpha": 1.0,
+          "continue_mass": 4.5852160956982857e-10,
+          "final_mass": 1.0887266088666081e-10,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 8,
+          "alpha": 1.0,
+          "continue_mass": 5.571014480665326e-05,
+          "final_mass": 0.00035565835423767567,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 9,
+          "alpha": 1.0,
+          "continue_mass": 0.004462468903511763,
+          "final_mass": 0.008723082952201366,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 10,
+          "alpha": 1.0,
+          "continue_mass": 0.07236555218696594,
+          "final_mass": 0.006022280547767878,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 11,
+          "alpha": 1.0,
+          "continue_mass": 5.680680988007225e-05,
+          "final_mass": 1.6495472664246336e-05,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 12,
+          "alpha": 1.0,
+          "continue_mass": 0.0001401169429300353,
+          "final_mass": 0.0008790991269052029,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 13,
+          "alpha": 1.0,
+          "continue_mass": 9.671834959590342e-06,
+          "final_mass": 0.000547365692909807,
+          "repetition": 0.0,
+          "token": " we"
+        },
+        {
+          "step": 14,
+          "alpha": 1.0,
+          "continue_mass": 4.3108626414323226e-05,
+          "final_mass": 8.535054803360254e-06,
+          "repetition": 0.0,
+          "token": " here"
+        },
+        {
+          "step": 15,
+          "alpha": 1.0,
+          "continue_mass": 3.7861685996176675e-05,
+          "final_mass": 6.416383985197172e-05,
+          "repetition": 0.0,
+          "token": " here"
+        },
+        {
+          "step": 16,
+          "alpha": 1.0,
+          "continue_mass": 0.023035550490021706,
+          "final_mass": 0.0018717364873737097,
+          "repetition": 0.0,
+          "token": " then"
+        },
+        {
+          "step": 17,
+          "alpha": 1.0,
+          "continue_mass": 6.488050530606415e-06,
+          "final_mass": 5.0459122576285154e-05,
+          "repetition": 0.0,
+          "token": " previous"
+        },
+        {
+          "step": 18,
+          "alpha": 1.0,
+          "continue_mass": 0.00012043862807331607,
+          "final_mass": 1.1138814443256706e-05,
+          "repetition": 0.0,
+          "token": ","
+        },
+        {
+          "step": 19,
+          "alpha": 1.0,
+          "continue_mass": 7.023309444775805e-05,
+          "final_mass": 9.67290616245009e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 20,
+          "alpha": 1.0,
+          "continue_mass": 2.832222708093468e-05,
+          "final_mass": 3.1416842830367386e-05,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 21,
+          "alpha": 1.0,
+          "continue_mass": 0.0007507773116230965,
+          "final_mass": 0.0010407364461570978,
+          "repetition": 0.0,
+          "token": " ..."
+        },
+        {
+          "step": 22,
+          "alpha": 1.0,
+          "continue_mass": 0.014394761994481087,
+          "final_mass": 0.007264020387083292,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 23,
+          "alpha": 1.0,
+          "continue_mass": 0.000671716290526092,
+          "final_mass": 0.0022086563985794783,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 24,
+          "alpha": 1.0,
+          "continue_mass": 0.00011441211245255545,
+          "final_mass": 0.0002380225050728768,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 25,
+          "alpha": 1.0,
+          "continue_mass": 0.004197994247078896,
+          "final_mass": 0.003145701950415969,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 26,
+          "alpha": 1.0,
+          "continue_mass": 0.0022538492921739817,
+          "final_mass": 0.006962190382182598,
+          "repetition": 0.0,
+          "token": " t"
+        },
+        {
+          "step": 27,
+          "alpha": 1.0,
+          "continue_mass": 0.0029385907109826803,
+          "final_mass": 0.003656286746263504,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 28,
+          "alpha": 1.0,
+          "continue_mass": 0.00027640291955322027,
+          "final_mass": 9.311054600402713e-05,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 29,
+          "alpha": 1.0,
+          "continue_mass": 0.010660978965461254,
+          "final_mass": 0.0033593804109841585,
+          "repetition": 0.0,
+          "token": " then"
+        },
+        {
+          "step": 30,
+          "alpha": 1.0,
+          "continue_mass": 0.000265745009528473,
+          "final_mass": 0.002413421170786023,
+          "repetition": 0.0,
+          "token": " is"
+        },
+        {
+          "step": 31,
+          "alpha": 1.0,
+          "continue_mass": 3.951120379497297e-05,
+          "final_mass": 1.4108255527389701e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 32,
+          "alpha": 1.0,
+          "continue_mass": 0.0011537136742845178,
+          "final_mass": 0.002743612276390195,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 33,
+          "alpha": 1.0,
+          "continue_mass": 0.0002799267531372607,
+          "final_mass": 0.00010531599400565028,
+          "repetition": 0.0,
+          "token": " we"
+        },
+        {
+          "step": 34,
+          "alpha": 1.0,
+          "continue_mass": 0.0002711348934099078,
+          "final_mass": 8.583877934142947e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 35,
+          "alpha": 1.0,
+          "continue_mass": 0.0003909570223186165,
+          "final_mass": 0.0003974816936533898,
+          "repetition": 0.0,
+          "token": " t"
+        },
+        {
+          "step": 36,
+          "alpha": 1.0,
+          "continue_mass": 0.00012906864867545664,
+          "final_mass": 0.0001237255783053115,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 37,
+          "alpha": 1.0,
+          "continue_mass": 0.0003012841334566474,
+          "final_mass": 0.0004868691030424088,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 38,
+          "alpha": 1.0,
+          "continue_mass": 0.0006080276798456907,
+          "final_mass": 0.0002490971237421036,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 39,
+          "alpha": 1.0,
+          "continue_mass": 0.0006054997793398798,
+          "final_mass": 0.0002884929708670825,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 40,
+          "alpha": 1.0,
+          "continue_mass": 0.00014168620691634715,
+          "final_mass": 2.300195410498418e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 41,
+          "alpha": 1.0,
+          "continue_mass": 0.0026391097344458103,
+          "final_mass": 0.004749804735183716,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 42,
+          "alpha": 1.0,
+          "continue_mass": 0.0015760991955175996,
+          "final_mass": 0.00032455523614771664,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 43,
+          "alpha": 1.0,
+          "continue_mass": 0.00025784588069655,
+          "final_mass": 0.00023502700787503272,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 44,
+          "alpha": 1.0,
+          "continue_mass": 0.000894558965228498,
+          "final_mass": 0.0013945072423666716,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 45,
+          "alpha": 1.0,
+          "continue_mass": 0.0006101748440414667,
+          "final_mass": 0.0005565214669331908,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 46,
+          "alpha": 1.0,
+          "continue_mass": 9.325394785264507e-05,
+          "final_mass": 5.0911636208184063e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 47,
+          "alpha": 1.0,
+          "continue_mass": 0.0001878949551610276,
+          "final_mass": 0.00029824371449649334,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 48,
+          "alpha": 1.0,
+          "continue_mass": 0.0011512727942317724,
+          "final_mass": 0.00075308553641662,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 49,
+          "alpha": 1.0,
+          "continue_mass": 0.00038885424146428704,
+          "final_mass": 0.0034094711299985647,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 50,
+          "alpha": 1.0,
+          "continue_mass": 0.00015057226119097322,
+          "final_mass": 0.00010211003973381594,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 51,
+          "alpha": 1.0,
+          "continue_mass": 0.00032751867547631264,
+          "final_mass": 0.00019261542183812708,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 52,
+          "alpha": 1.0,
+          "continue_mass": 0.0005253992858342826,
+          "final_mass": 0.0010564320255070925,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 53,
+          "alpha": 1.0,
+          "continue_mass": 0.0036395553033798933,
+          "final_mass": 0.00044558546505868435,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 54,
+          "alpha": 1.0,
+          "continue_mass": 0.0007409825921058655,
+          "final_mass": 0.00030758537468500435,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 55,
+          "alpha": 1.0,
+          "continue_mass": 0.00023954606149345636,
+          "final_mass": 0.002061803825199604,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 56,
+          "alpha": 1.0,
+          "continue_mass": 0.00035610751365311444,
+          "final_mass": 0.0002676017174962908,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 57,
+          "alpha": 1.0,
+          "continue_mass": 0.0002390024601481855,
+          "final_mass": 7.131765596568584e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 58,
+          "alpha": 1.0,
+          "continue_mass": 0.00011779604392359033,
+          "final_mass": 0.0006323389243334532,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 59,
+          "alpha": 1.0,
+          "continue_mass": 0.003801613114774227,
+          "final_mass": 0.0009467439958825707,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 60,
+          "alpha": 1.0,
+          "continue_mass": 0.0005128085613250732,
+          "final_mass": 0.0007405744399875402,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 61,
+          "alpha": 1.0,
+          "continue_mass": 0.0011140878777951002,
+          "final_mass": 0.0011917949886992574,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 62,
+          "alpha": 1.0,
+          "continue_mass": 0.0008113898802548647,
+          "final_mass": 0.0011397389462217689,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 63,
+          "alpha": 1.0,
+          "continue_mass": 0.00028420303715392947,
+          "final_mass": 5.741351196775213e-05,
+          "repetition": 0.0,
+          "token": " <"
+        }
+      ]
+    },
+    {
+      "problem_id": "heldout-000002",
+      "question": "A box has 18 rows with 20 items in each row, then 5 items are removed. How many remain?",
+      "gold_answer": "355",
+      "controller": "closed_loop_cet",
+      "layer": 18,
+      "completion": " <1> <.'s< <Then then I I then ( < <.: <\n < < (olving is ( ( ( ( has the ( <number: < ( ( ( ( < < < < < < < < ( < < < < <number < < < < < < < < <",
+      "extracted_answer": null,
+      "correct": false,
+      "repetition_rate": 0.0,
+      "generated_tokens": 64,
+      "stopped_valid_final": false,
+      "mean_alpha": 0.24609375,
+      "max_alpha": 1.0,
+      "alpha_trace": [
+        0.5,
+        0.5,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5,
+        1.0,
+        0.25,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.25,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0
+      ],
+      "signal_trace": [
+        {
+          "step": 0,
+          "alpha": 0.5,
+          "continue_mass": 0.05292155221104622,
+          "final_mass": 7.080449722707272e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 1,
+          "alpha": 0.5,
+          "continue_mass": 8.989699153971742e-07,
+          "final_mass": 3.756007060928823e-07,
+          "repetition": 0.0,
+          "token": "1"
+        },
+        {
+          "step": 2,
+          "alpha": 0.5,
+          "continue_mass": 0.00046257892972789705,
+          "final_mass": 0.0003279564843978733,
+          "repetition": 0.0,
+          "token": ">"
+        },
+        {
+          "step": 3,
+          "alpha": 1.0,
+          "continue_mass": 0.00025781008298508823,
+          "final_mass": 0.003541503334417939,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 4,
+          "alpha": 1.0,
+          "continue_mass": 3.903908873326145e-05,
+          "final_mass": 0.00010731849033618346,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 5,
+          "alpha": 1.0,
+          "continue_mass": 2.014129495364614e-05,
+          "final_mass": 0.000229866782319732,
+          "repetition": 0.0,
+          "token": "'s"
+        },
+        {
+          "step": 6,
+          "alpha": 0.5,
+          "continue_mass": 0.0005999795976094902,
+          "final_mass": 0.0003604473313316703,
+          "repetition": 0.0,
+          "token": "<"
+        },
+        {
+          "step": 7,
+          "alpha": 0.5,
+          "continue_mass": 0.0015787477605044842,
+          "final_mass": 0.001031822757795453,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 8,
+          "alpha": 1.0,
+          "continue_mass": 0.00016975180187728256,
+          "final_mass": 0.002190694445744157,
+          "repetition": 0.0,
+          "token": "Then"
+        },
+        {
+          "step": 9,
+          "alpha": 1.0,
+          "continue_mass": 4.326325324655045e-06,
+          "final_mass": 3.753650889848359e-05,
+          "repetition": 0.0,
+          "token": " then"
+        },
+        {
+          "step": 10,
+          "alpha": 1.0,
+          "continue_mass": 0.00024558784207329154,
+          "final_mass": 0.0004154452763032168,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 11,
+          "alpha": 1.0,
+          "continue_mass": 0.00018074757826980203,
+          "final_mass": 0.0002981836150866002,
+          "repetition": 0.0,
+          "token": " I"
+        },
+        {
+          "step": 12,
+          "alpha": 1.0,
+          "continue_mass": 0.0019242139533162117,
+          "final_mass": 0.0048996214754879475,
+          "repetition": 0.0,
+          "token": " then"
+        },
+        {
+          "step": 13,
+          "alpha": 1.0,
+          "continue_mass": 1.9575905753299594e-05,
+          "final_mass": 5.4629224905511364e-05,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 14,
+          "alpha": 0.5,
+          "continue_mass": 0.0003530249814502895,
+          "final_mass": 0.0002516542444936931,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 15,
+          "alpha": 1.0,
+          "continue_mass": 9.167290409095585e-05,
+          "final_mass": 0.001275775139220059,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 16,
+          "alpha": 0.25,
+          "continue_mass": 6.784880679333583e-05,
+          "final_mass": 6.663953536190093e-05,
+          "repetition": 0.0,
+          "token": "."
+        },
+        {
+          "step": 17,
+          "alpha": 0.0,
+          "continue_mass": 0.0002465554280206561,
+          "final_mass": 0.0005439413362182677,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 18,
+          "alpha": 0.25,
+          "continue_mass": 0.0017856997437775135,
+          "final_mass": 0.0014874167973175645,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 19,
+          "alpha": 0.0,
+          "continue_mass": 0.00012619174958672374,
+          "final_mass": 0.001718448125757277,
+          "repetition": 0.0,
+          "token": "\\n"
+        },
+        {
+          "step": 20,
+          "alpha": 0.0,
+          "continue_mass": 0.0077565074898302555,
+          "final_mass": 0.008358939550817013,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 21,
+          "alpha": 0.0,
+          "continue_mass": 0.0016240186523646116,
+          "final_mass": 0.0032685294281691313,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 22,
+          "alpha": 0.25,
+          "continue_mass": 0.0005252468981780112,
+          "final_mass": 0.00017052965995389968,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 23,
+          "alpha": 0.0,
+          "continue_mass": 2.042684172920417e-06,
+          "final_mass": 9.114940439758357e-06,
+          "repetition": 0.0,
+          "token": "olving"
+        },
+        {
+          "step": 24,
+          "alpha": 0.0,
+          "continue_mass": 0.00035822170320898294,
+          "final_mass": 0.000586760404985398,
+          "repetition": 0.0,
+          "token": " is"
+        },
+        {
+          "step": 25,
+          "alpha": 0.0,
+          "continue_mass": 0.00017484166892245412,
+          "final_mass": 0.0019752387888729572,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 26,
+          "alpha": 0.0,
+          "continue_mass": 0.0003822465077973902,
+          "final_mass": 0.0109612001106143,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 27,
+          "alpha": 0.0,
+          "continue_mass": 0.0006173513829708099,
+          "final_mass": 0.0015873530646786094,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 28,
+          "alpha": 0.0,
+          "continue_mass": 0.00018030707724392414,
+          "final_mass": 0.00064702401868999,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 29,
+          "alpha": 0.25,
+          "continue_mass": 0.0025738750118762255,
+          "final_mass": 0.0024105687625706196,
+          "repetition": 0.0,
+          "token": " has"
+        },
+        {
+          "step": 30,
+          "alpha": 0.25,
+          "continue_mass": 6.960055907256901e-05,
+          "final_mass": 2.0289277017582208e-05,
+          "repetition": 0.0,
+          "token": " the"
+        },
+        {
+          "step": 31,
+          "alpha": 0.0,
+          "continue_mass": 0.00016873309505172074,
+          "final_mass": 0.0017764854710549116,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 32,
+          "alpha": 0.0,
+          "continue_mass": 9.98990872176364e-05,
+          "final_mass": 0.0001916928740683943,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 33,
+          "alpha": 0.0,
+          "continue_mass": 0.00010072924487758428,
+          "final_mass": 0.000571298529393971,
+          "repetition": 0.0,
+          "token": "number"
+        },
+        {
+          "step": 34,
+          "alpha": 0.25,
+          "continue_mass": 0.00015294748300220817,
+          "final_mass": 0.00015090360830072314,
+          "repetition": 0.0,
+          "token": ":"
+        },
+        {
+          "step": 35,
+          "alpha": 0.0,
+          "continue_mass": 8.686742512509227e-05,
+          "final_mass": 9.96828603092581e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 36,
+          "alpha": 0.0,
+          "continue_mass": 0.0005120439454913139,
+          "final_mass": 0.0024753178004175425,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 37,
+          "alpha": 0.0,
+          "continue_mass": 0.0010250132763758302,
+          "final_mass": 0.0011915161740034819,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 38,
+          "alpha": 0.0,
+          "continue_mass": 2.3512960979132913e-05,
+          "final_mass": 5.464748392114416e-05,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 39,
+          "alpha": 0.0,
+          "continue_mass": 5.378227069741115e-05,
+          "final_mass": 0.0005285078077577055,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 40,
+          "alpha": 0.25,
+          "continue_mass": 8.28282572911121e-05,
+          "final_mass": 7.747291238047183e-05,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 41,
+          "alpha": 0.25,
+          "continue_mass": 0.0006772448541596532,
+          "final_mass": 0.00038154397043399513,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 42,
+          "alpha": 0.0,
+          "continue_mass": 0.0003100548929069191,
+          "final_mass": 0.0010004545329138637,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 43,
+          "alpha": 0.0,
+          "continue_mass": 0.0002972922520712018,
+          "final_mass": 0.001864412217400968,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 44,
+          "alpha": 0.25,
+          "continue_mass": 0.00036262665526010096,
+          "final_mass": 0.00027095075347460806,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 45,
+          "alpha": 0.0,
+          "continue_mass": 0.00012119737948523834,
+          "final_mass": 0.0004884221125394106,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 46,
+          "alpha": 0.0,
+          "continue_mass": 0.0003578364849090576,
+          "final_mass": 0.0010135930497199297,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 47,
+          "alpha": 0.0,
+          "continue_mass": 7.052033470245078e-05,
+          "final_mass": 0.00031494966242462397,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 48,
+          "alpha": 0.0,
+          "continue_mass": 0.00018446857575327158,
+          "final_mass": 0.0003719270462170243,
+          "repetition": 0.0,
+          "token": " ("
+        },
+        {
+          "step": 49,
+          "alpha": 0.0,
+          "continue_mass": 0.0005820388905704021,
+          "final_mass": 0.0029704009648412466,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 50,
+          "alpha": 0.0,
+          "continue_mass": 0.00017172338266391307,
+          "final_mass": 0.00032167142489925027,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 51,
+          "alpha": 0.0,
+          "continue_mass": 0.0005646133795380592,
+          "final_mass": 0.0013063192600384355,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 52,
+          "alpha": 0.25,
+          "continue_mass": 0.0008561107097193599,
+          "final_mass": 0.000589702045544982,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 53,
+          "alpha": 0.0,
+          "continue_mass": 0.0004604883724823594,
+          "final_mass": 0.00047886924585327506,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 54,
+          "alpha": 0.0,
+          "continue_mass": 0.00037904028431512415,
+          "final_mass": 0.0022136103361845016,
+          "repetition": 0.0,
+          "token": "number"
+        },
+        {
+          "step": 55,
+          "alpha": 0.0,
+          "continue_mass": 0.0003139637701679021,
+          "final_mass": 0.0003606793179642409,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 56,
+          "alpha": 0.0,
+          "continue_mass": 0.0004386845394037664,
+          "final_mass": 0.0008905118447728455,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 57,
+          "alpha": 0.0,
+          "continue_mass": 0.00017161239520646632,
+          "final_mass": 0.0006803527940064669,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 58,
+          "alpha": 0.0,
+          "continue_mass": 0.00038948177825659513,
+          "final_mass": 0.0005326008540578187,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 59,
+          "alpha": 0.0,
+          "continue_mass": 0.00041985377902165055,
+          "final_mass": 0.00043005149927921593,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 60,
+          "alpha": 0.0,
+          "continue_mass": 0.0004696486867032945,
+          "final_mass": 0.0005719214677810669,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 61,
+          "alpha": 0.25,
+          "continue_mass": 0.0005157428095117211,
+          "final_mass": 0.0002296460879733786,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 62,
+          "alpha": 0.0,
+          "continue_mass": 0.00012655554746743292,
+          "final_mass": 0.0007430732948705554,
+          "repetition": 0.0,
+          "token": " <"
+        },
+        {
+          "step": 63,
+          "alpha": 0.0,
+          "continue_mass": 0.0001265900064026937,
+          "final_mass": 0.0002731999265961349,
+          "repetition": 0.0,
+          "token": " <"
+        }
+      ]
+    }
+  ]
+}
