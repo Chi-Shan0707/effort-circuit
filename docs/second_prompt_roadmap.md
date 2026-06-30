@@ -29,7 +29,19 @@ Turn the current strong lead into a cleaner causal intervention result by auditi
    - Add verbosity/generic continuation controls.
    - Gate: useful-effort claim requires reasoning-task gains without uncontrolled task-out verbosity.
 
-5. **Synthesis**
+5. **Data-driven token metric**
+   - Replace hand-coded token sets with train-selected high/low discriminative token clusters.
+   - Evaluate on heldout with KL, answer-token margin, and EOS/Final margin.
+
+6. **Process/task disentanglement**
+   - Run cross-question patching and mean process-direction addition.
+   - Check source-answer leakage and target-answer preservation.
+
+7. **Closed-loop CET controller**
+   - Implement token-level alpha control from effort/final/repetition signals.
+   - Stop on valid final and reduce steering under repetition or late-stage answer readiness.
+
+8. **Synthesis**
    - Produce a comprehensive second-stage report that separates settled evidence, weak evidence, contradictions, and next experiments.
 
 ## Commit Policy
